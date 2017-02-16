@@ -2,6 +2,7 @@ package edu.eci.cosw.services;
 
 import edu.eci.cosw.entities.Bar;
 
+import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -14,4 +15,14 @@ public interface Services {
     boolean addBar(Bar bar);
 
     Bar getById(int id);
+
+    InputStream getLogoById(int id);
+
+    String getNameById(int id);
+
+    String getHorarioById(int id);
+
+    String getDescripcionById(int id);
+
+
 }
