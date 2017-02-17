@@ -7,6 +7,7 @@ angular.module('myApp', [
   'myApp.ingresarBar',
   'myApp.ingreso',
   'myApp.registro',
+  'myApp.obtenerBares',
   'services.listFactory',
   'myApp.version'
 ]).

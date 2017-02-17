@@ -51,6 +51,8 @@ public class BaresController {
                 .body(new InputStreamResource(logo));
     }
 
+
+
     @RequestMapping(path = "/{id}/name", method = RequestMethod.GET)
     public ResponseEntity<?> nameById(@PathVariable int id){
         String name = manejadorBares.getNameById(id);
