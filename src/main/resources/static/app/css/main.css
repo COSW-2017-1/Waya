@@ -42,6 +42,20 @@
 	padding-top: 5%;
 }
 
+.bg-orange{
+    background-color: #FF5722;
+}
+
+.test{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.loginregform{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
 #myNavbar > ul > li > a{
 	color: white;
 }
@@ -56,7 +70,7 @@
 }
 
 .affix-top{
-	background-color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.6);
 	border-color: rgba(0, 0, 0, 0);
 }
 
