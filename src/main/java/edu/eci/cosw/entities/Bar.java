@@ -10,6 +10,15 @@ public class Bar {
     int id;
     String descripcion;
     String horario;
+    String direccion;
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
 
     public Bar(){}
 

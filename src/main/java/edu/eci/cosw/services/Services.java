@@ -24,5 +24,7 @@ public interface Services {
 
     String getDescripcionById(int id);
 
+    String getDireccion(int id);
+
 
 }

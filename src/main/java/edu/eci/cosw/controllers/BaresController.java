@@ -72,5 +72,11 @@ public class BaresController {
         return new ResponseEntity<>(descripcion,HttpStatus.ACCEPTED);
     }
 
+    @RequestMapping(path = "/{id}/direccion", method = RequestMethod.GET)
+    public ResponseEntity<?> direccionById(@PathVariable int id){
+        String direccion = manejadorBares.getDireccion(id);
+        if(direccion==null)return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(direccion,HttpStatus.ACCEPTED);
+    }
 
 }

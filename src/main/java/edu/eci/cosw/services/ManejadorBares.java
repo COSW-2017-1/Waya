@@ -60,4 +60,9 @@ public class ManejadorBares implements Services {
         if(id>=bares.size())return null;
         return bares.get(id).getDescripcion();
     }
+
+    public String getDireccion(int id){
+        if(id>=bares.size())return null;
+        return bares.get(id).getDireccion();
+    }
 }
