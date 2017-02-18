@@ -6,7 +6,7 @@ angular.module('myApp', [
   'myApp.landing',
   'myApp.ingresarBar',
   'myApp.ingreso',
-  'myApp.registro',
+  'myApp.mapsSearch',
   'myApp.obtenerBares',
   'services.listFactory',
   'myApp.version'

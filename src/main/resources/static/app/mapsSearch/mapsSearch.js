@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('myApp.registro', ['ngRoute'])
+angular.module('myApp.mapsSearch', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/registro', {
-    templateUrl: 'registro/registro.html',
-    controller: 'RegistroCtrl'
+  $routeProvider.when('/mapsSearch', {
+    templateUrl: 'mapsSearch/mapsSearch.html',
+    controller: 'MapsSearchCtrl'
   });
 }])
 
-.controller('RegistroCtrl', ['$scope', 'fabrica', function($scope, fabrica) {
+.controller('MapsSearchCtrl', ['$scope', 'fabrica', function($scope, fabrica) {
         $scope.listado= fabrica.getListado();
         $scope.propertyName = 'cover';
         $scope.reverse = true;
@@ -17,8 +17,4 @@ angular.module('myApp.registro', ['ngRoute'])
             $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
             $scope.propertyName = propertyName;
           };
-
-
-
-
 }]);
