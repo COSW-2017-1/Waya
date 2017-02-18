@@ -1,27 +1,32 @@
 <div>
     <div class="container-fluid test">
         <div class="row">
-
             <div class="col-md-6">
-                <div class="loginregform">
-                    <h2>Vertical (basic) form</h2>
-                    <form>
+                <div ng-show="!authenticated" class="loginregform">
+                    <h2>Ingresa a la aplicación</h2>
+                    <form role="form" ng-submit="login()">
                         <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            <input type="text" placeholder="Usuario o Email"
+                                   class="form-control" id="username" name="username" ng-model="credentials.username"/>
                         </div>
                         <div class="form-group">
-                            <label for="pwd">Password:</label>
-                            <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                            <input type="password" placeholder="Contraseña"
+                                   class="form-control" id="password" name="password" ng-model="credentials.password"/>
                         </div>
                         <div class="checkbox">
-                            <label><input type="checkbox"> Remember me</label>
+                            <label><input type="checkbox">Recordar usuario</label>
                         </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-primary">Ingresa</button>
                     </form>
                 </div>
             </div>
 
+            <div ng-show="authenticated" >
+                <h1>Welcome</h1>
+                <p> You are authenticated</p>
+            </div>
+
+            <!--
             <div class="col-md-6 bg-orange">
                 <div class="loginregform">
                     <h2>Vertical (basic) form</h2>
@@ -41,6 +46,7 @@
                     </form>
                 </div>
             </div>
+            -->
         </div>
     </div>
 </div>

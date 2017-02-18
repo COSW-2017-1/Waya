@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>-->
+
+    <!-- Angular Material -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+
     <link rel="stylesheet" href="app.css">
   </head>
 
@@ -40,9 +44,14 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#descargas">Descargas</a></li>
           <li><a href="#equipo">Equipo</a></li>
+
+          <!-- Links con errores de sintaxis, pueden cagar cosas -->
           <li><a href="#!/ingresarBar">Registro de Bares</a></li>
           <li><a href="#!/obtenerBares">buscar bares</a> </li>
-          <button onclick="window.location.href='#!/ingreso'" class="btn btn-success navbar-btn">Ingresa</button>
+
+          <button ng-show="!authenticated" onclick="window.location.href='#!/ingreso'" class="btn btn-success navbar-btn">Ingresa</button>
+          <button  ng-controller="LogOutController" ng-show="authenticated" class="btn btn-success navbar-btn"
+                                                        ng-click="logout($event)" >Cerrar sesíon</button>
           <button onclick="window.location.href='#!/mapsSearch'" class="btn btn-warning navbar-btn">Maps Search</button>
         </ul>
       </div>
@@ -90,5 +99,11 @@
     <script src="components/version/version.js"></script>
     <script src="components/version/version-directive.js"></script>
     <script src="components/version/interpolate-filter.js"></script>
+    <!--Dependencias de Angular material -->
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+
+    <!--Angular material -->
+    <script src="bower_components/angular-material/angular-material.js"></script>
   </body>
 </html>
