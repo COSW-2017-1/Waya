@@ -204,3 +204,74 @@ input:-webkit-autofill {
 	color: #BDBDBD;
 	background-color: #212121;
 }
+
+
+/* Input Styles */
+.SBcontact{
+    padding:10px 0 10px;
+  }
+
+.SBform{
+    width: 100%;
+    padding: 15px;
+    background:#f8f8f8;
+    border:1px solid rgba(0, 0, 0, 0.075);
+    margin-bottom:25px;
+    color:#727272 !important;
+    font-size:13px;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+
+.SBform:hover{
+    border:1px solid #8BC3A3;
+  }
+
+.SBform:focus{
+    color: white;
+    outline: none;
+    border:1px solid #8BC3A3;
+  }
+
+.SBtextarea{
+    height: 200px;
+    max-height: 200px;
+    max-width: 100%;
+  }
+
+.SBform-btn{
+    width:180px;
+    display: block;
+    height: auto;
+    padding:15px;
+    color:#fff;
+    background:#8BC3A3;
+    border:none;
+    border-radius:3px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin:auto;
+    box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  }
+
+.SBform-btn:hover{
+    background:#111;
+    color: white;
+    border:none;
+  }
+.SBform-btn:active{
+    opacity: 0.9;
+  }
+.SBinput {
+    position: relative;
+    z-index: 9999;
+}
+.SBpage{
+    padding-top: 4em;
+    height: 40em;
+}
+
