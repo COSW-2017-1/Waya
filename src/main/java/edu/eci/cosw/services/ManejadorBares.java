@@ -1,6 +1,7 @@
 package edu.eci.cosw.services;
 
 import edu.eci.cosw.entities.Bar;
+import edu.eci.cosw.entities.Coordenada;
 import org.springframework.stereotype.Service;
 
 import java.io.FileInputStream;
@@ -67,5 +68,10 @@ public class ManejadorBares implements Services {
     public String getDireccion(int id){
         if(id>=bares.size())return null;
         return bares.get(id).getDireccion();
+    }
+
+    public Coordenada getCoordenadas(int id) {
+        if(id>=bares.size())return null;
+        return bares.get(id).getCoor();
     }
 }

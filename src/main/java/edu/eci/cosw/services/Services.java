@@ -1,6 +1,7 @@
 package edu.eci.cosw.services;
 
 import edu.eci.cosw.entities.Bar;
+import edu.eci.cosw.entities.Coordenada;
 
 import java.io.InputStream;
 import java.util.List;
@@ -26,5 +27,5 @@ public interface Services {
 
     String getDireccion(int id);
 
-
+    Coordenada getCoordenadas(int id);
 }

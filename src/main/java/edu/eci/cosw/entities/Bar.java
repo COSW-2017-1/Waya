@@ -11,6 +11,15 @@ public class Bar {
     String descripcion;
     String horario;
     String direccion;
+    Coordenada coor;
+
+    public Coordenada getCoor() {
+        return coor;
+    }
+
+    public void setCoor(Coordenada coor) {
+        this.coor = coor;
+    }
 
     public String getDireccion() {
         return direccion;

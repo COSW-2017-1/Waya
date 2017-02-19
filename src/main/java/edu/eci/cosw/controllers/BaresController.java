@@ -1,6 +1,7 @@
 package edu.eci.cosw.controllers;
 
 import edu.eci.cosw.entities.Bar;
+import edu.eci.cosw.entities.Coordenada;
 import edu.eci.cosw.services.ManejadorBares;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
@@ -51,8 +52,6 @@ public class BaresController {
                 .body(new InputStreamResource(logo));
     }
 
-
-
     @RequestMapping(path = "/{id}/name", method = RequestMethod.GET)
     public ResponseEntity<?> nameById(@PathVariable int id){
         String name = manejadorBares.getNameById(id);
@@ -81,4 +80,10 @@ public class BaresController {
         return new ResponseEntity<>(direccion,HttpStatus.ACCEPTED);
     }
 
+    @RequestMapping(path = "/{id}/coordenadas", method = RequestMethod.GET)
+    public ResponseEntity<?> coordenadasById(@PathVariable int id){
+        Coordenada coordenada = manejadorBares.getCoordenadas(id);
+        if(coordenada==null)return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(coordenada,HttpStatus.ACCEPTED);
+    }
 }
