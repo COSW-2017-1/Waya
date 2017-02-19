@@ -328,6 +328,44 @@ function initMap() {
     ]
   });
 
+  var iconBase = 'img/vector/';
+  var icons = {
+    cover: {
+        icon: iconBase + 'All.png'
+    },
+    freebar: {
+        icon: iconBase + 'Cover.png'
+    },
+    normal: {
+        icon: iconBase + 'Drink.png'
+    }
+  };
+
+  function addMarker(feature) {
+    var marker = new google.maps.Marker({
+        position: feature.position,
+        icon: icons[feature.type].icon,
+        map: map
+    });
+  }
+
+  var features = [
+    {
+      position: new google.maps.LatLng(4.669070, -74.055216),
+      type: 'cover'
+    }, {
+      position: new google.maps.LatLng(4.668912, -74.055302),
+      type: 'freebar'
+    }, {
+      position: new google.maps.LatLng(4.667749, -74.053687),
+      type: 'normal'
+    }
+  ];
+
+  for (var i = 0, feature; feature = features[i]; i++) {
+    addMarker(feature);
+  }
+
   var infoWindow = new google.maps.InfoWindow({map: map});
 
     // Try HTML5 geolocation.
