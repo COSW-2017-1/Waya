@@ -22,7 +22,7 @@ Implementación básica sin API
 */
 .controller('IngresarBarCtrl', ['$scope', 'bares', function ($scope,bares)  {
       $scope.add=function(){
-        var bar={"logo":$scope.logo,"name":$scope.name,"id":$scope.id,"descripcion":$scope.descripcion,"horario":$scope.horario};
+        var bar={"logo":$scope.logo,"name":$scope.name,"descripcion":$scope.descripcion,"horario":$scope.horario,"direccion":$scope.direccion,"coor":[$scope.latitud,$scope.longitud]};
         bares.save(bar);
 
       }
