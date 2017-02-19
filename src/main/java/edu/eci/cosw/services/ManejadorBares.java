@@ -84,7 +84,7 @@ public class ManejadorBares implements Services {
         a.setDireccion("cll falsa #123");
         addBar(a);
         Bar b=new Bar();
-        b.setId(0);
+        b.setId(1);
         b.setName("Donde Gladys");
         b.setDescripcion("bla bla bla bla bla bla bla bla bla bla bla bla ");
         b.setDireccion("cll falsa #123");
