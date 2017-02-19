@@ -72,6 +72,6 @@ public class ManejadorBares implements Services {
 
     public Coordenada getCoordenadas(int id) {
         if(id>=bares.size())return null;
-        return bares.get(id).getCoor();
+        return new Coordenada(bares.get(id).getLatitud(),bares.get(id).getLongitud());
     }
 }

@@ -11,14 +11,23 @@ public class Bar {
     String descripcion;
     String horario;
     String direccion;
-    Coordenada coor;
+    float longitud;
+    float latitud;
 
-    public Coordenada getCoor() {
-        return coor;
+    public float getLongitud() {
+        return longitud;
     }
 
-    public void setCoor(Coordenada coor) {
-        this.coor = coor;
+    public void setLongitud(float longitud) {
+        this.longitud = longitud;
+    }
+
+    public float getLatitud() {
+        return latitud;
+    }
+
+    public void setLatitud(float latitud) {
+        this.latitud = latitud;
     }
 
     public String getDireccion() {

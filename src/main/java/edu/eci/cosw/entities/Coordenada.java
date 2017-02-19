@@ -9,7 +9,10 @@ public class Coordenada {
 
     public Coordenada(){}
 	
-	/*
+	public Coordenada(float latitud, float longitud){
+        this.longitud=longitud;
+        this.latitud=latitud;
+    }
     public float getLongitud() {
         return longitud;
     }
@@ -24,5 +27,5 @@ public class Coordenada {
 
     public void setLatitud(float latitud) {
         this.latitud = latitud;
-    }*/
+    }
 }
