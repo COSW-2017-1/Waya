@@ -1,13 +1,26 @@
-<style type="text/css">
-      html, body { height: 100%; margin: 0; padding: 0; }
-      #map { height: 100%; }
-    </style>
-<div class="contenido">
-    <h1>Mapas</h1>
-    <div style="height:100%; width: 100%;">
-        <div id="map"></div>
+<div class="contenido-mapas">
+    <h1 class="lato" style="padding-bottom: 15px;">Mapas</h1>
+    <hr class="resalt">
+    <br>
+    <div class="row contenido-mapas-bares ">
+        <div class="col-md-4 centrar-texto">
+            <img src="img/cover.png" style="width: 100px ;heigth: 300px">
+            <h3 class="lato-bold">Bares con pago de cover</h3>
+            <p class="lato">Este tipo de bar requiere un pago previo para su ingreso.</p>
+        </div>
+        <div class="col-md-4 centrar-texto">
+            <img src="img/bat.png" style="width: 100px ;heigth: 300px">
+            <h3 class="lato-bold">Bares barra libre</h3>
+            <p class="lato">Este tipo de bar requiere un pago previo para su ingreso y, una vez dentro puedes pedir bebidas de manera ilimitada.</p>
+        </div>
+        <div class="col-md-4 centrar-texto">
+            <img src="img/drink.png" style="width: 100px ;heigth: 300px">
+            <h3 class="lato-bold">Bares normales</h3>
+            <p class="lato">El típico bar: entras, pides y sales.</p>
+        </div>
     </div>
+    <div id="map" style="height: 400px; width: 100%; margin: 0; padding: 0;"></div>
     <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZfaLo_4FPzl5Hqo2Dc-1QiC2eqIZe-mI&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDT3MTyAiY9GoV8n1M-VxxFzcWVzEXtoLk&callback=initMap">
     </script>
 </div>

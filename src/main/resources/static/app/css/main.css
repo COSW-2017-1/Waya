@@ -5,6 +5,38 @@
 
 .lato{
 	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+}
+
+.lato-bold{
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+}
+
+.custom-form{
+    border-radius: 0px;
+    height: 45px;
+    width: 70%;
+    border-color: #a8dbbf;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.btn-lr{
+    border-radius: 0px;
+    border-color: #4D735E;
+    border-style: solid;
+    border-width: 3px;
+    height: 45px;
+    width: 70%;
+}
+
+.ligth-green-grey{
+    color: #4D735E;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
 .roboto{
@@ -17,6 +49,18 @@
 
 .blanco{
 	color: white;
+}
+
+.bg-grey{
+    background-color: #e1ede6;
+}
+
+.resalt{
+    float: left;
+    width: 110px;
+    height: 6px;
+    background: #FFB969;
+    margin: auto;
 }
 
 .jumbotron{
@@ -46,9 +90,9 @@
     background-color: #FF5722;
 }
 
-.test{
-    margin-top: 5%;
-    margin-bottom: 5%;
+.margen-top-bot-ingreso{
+    padding-top: 15%;
+    padding-bottom: 17%;
 }
 
 .loginregform{
@@ -101,6 +145,19 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 160%;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+.contenido-mapas{
+    padding-top: 3%;
+}
+
+.contenido-mapas-bares{
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .neon{
