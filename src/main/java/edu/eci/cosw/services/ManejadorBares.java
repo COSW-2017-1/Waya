@@ -21,7 +21,9 @@ public class ManejadorBares implements Services {
     private List<Bar> bares;
 
     public ManejadorBares(){
+
         bares=new CopyOnWriteArrayList<>();
+        agregarEjemplo();
     }
 
     public List<Bar> getBares() {
@@ -73,5 +75,19 @@ public class ManejadorBares implements Services {
     public Coordenada getCoordenadas(int id) {
         if(id>=bares.size())return null;
         return new Coordenada(bares.get(id).getLatitud(),bares.get(id).getLongitud());
+    }
+    private void agregarEjemplo(){
+        Bar a=new Bar();
+        a.setId(0);
+        a.setName("Donde Gladys");
+        a.setDescripcion("bla bla bla bla bla bla bla bla bla bla bla bla ");
+        a.setDireccion("cll falsa #123");
+        addBar(a);
+        Bar b=new Bar();
+        b.setId(0);
+        b.setName("Donde Gladys");
+        b.setDescripcion("bla bla bla bla bla bla bla bla bla bla bla bla ");
+        b.setDireccion("cll falsa #123");
+        addBar(b);
     }
 }
