@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -27,6 +29,7 @@ public class ManejadorBares implements Services {
 
     public boolean addBar(Bar toAdd){
         if(bares.contains(toAdd))return false;
+        toAdd.setId(bares.size());
         bares.add(toAdd);
         return true;
     }
@@ -39,9 +42,9 @@ public class ManejadorBares implements Services {
     public InputStream getLogoById(int id) {
         if(id>=bares.size())return null;
         try{
-            InputStream toReturn = new FileInputStream(bares.get(id).getLogo());
+            InputStream toReturn = new URL(bares.get(id).getLogo()).openStream();
             return toReturn;
-        }catch (FileNotFoundException ex) {
+        }catch (Exception e) {
             return null;
         }
     }
