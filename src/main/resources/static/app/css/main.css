@@ -275,3 +275,61 @@ input:-webkit-autofill {
     height: 40em;
 }
 
+.SBa{
+  color:#dd4f24
+}
+.SBposts{
+  padding:.5em;
+}
+.SBposts .SBpost{
+  background:#fff;
+  border-radius:0 0 .5em .5em;
+  box-shadow:2px 2px 10px rgba(0,0,0,0.5);
+  color:#7a7a7a;
+  margin-bottom:.5em;
+  overflow: hidden;
+}
+.SBposts .SBpost .SBdescripcion .SBdetalles{
+  height:160px;
+  margin-left:170px;
+}
+.SBposts .SBpost .SBdescripcion .SBdetalles .SBdireccion{
+  float:right;
+  margin:.3em 1em .3em .3em;
+}
+.SBposts .SBpost .SBdescripcion .SBdetalles .SBdes{
+  float: left;
+  margin: .3em;
+  width:
+  border: 1px solid red;
+
+}
+.SBposts .SBpost .SBdescripcion .SBdetalles .SBtag{
+  background:#22bce0;
+  border-radius:.5em;
+  color:#fff;
+  padding:.2em .5em;
+  text-decoration:none
+}
+.SBposts .SBpost .SBdescripcion .SBdetalles .SBtitulo{
+  color:#444;
+  font-size:1.1em;
+  font-style:italic;
+  margin:0;
+  padding:.5em .5em 0 0;
+}
+.SBposts .SBpost .SBdescripcion .SBimagen{
+  float:left;
+  margin: 25px
+}
+.SBposts .SBpost .SBdescripcion .SBimagen img{
+  height:160px;
+  vertical-align:top;
+  width:120px;
+}
+@media screen and (min-width: 768px){
+.SBposts .SBpost{display:inline-block !important;width:48%;vertical-align:top;}
+.SBposts .SBpost:nth-child(odd){margin-right:2%}
+}
+
+

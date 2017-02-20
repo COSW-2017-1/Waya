@@ -8,19 +8,23 @@
  Vuelve Pronto
 </p>
 
-<table class="table table-striped table-hover">
-  <tbody>
-  <tr>
-    <th>  <button ng-click="sortBy('name')">nombre</button></th>
-    <th></th>
-    <th>  <button ng-click="sortBy('id')">id</button></th>
-    <th></th>
+<section class="SBposts">
 
+  <article class="SBpost" ng-repeat="todo in listado | orderBy:propertyName:reverse">
+    <div class="SBdescripcion">
+      <figure class="SBimagen">
+        <img src="imagenes/foto.jpg" />
+      </figure>
+      <div class="SBdetalles">
+        <h2 class="SBtitulo">
+          {{todo.name}}
+        </h2>
+        <a class="SBa SBtag" href="#">{{todo.tipo}}</a>
+        <a class="SBa SBtag" href="#">{{todo.genero}}</a>
+        <p class="SBdireccion">{{todo.direccion}}</p>
+        <p class="SBdes">{{todo.descripcion}}</p>
+      </div>
+    </div>
+  </article>
+</section>
 
-  </tr>
-  <tr ng-repeat="todo in listado | orderBy:propertyName:reverse">
-    <td>{{todo.name}}</td>
-    <td>{{todo.id}}</td>
-  </tr>
-  </tbody>
-</table>

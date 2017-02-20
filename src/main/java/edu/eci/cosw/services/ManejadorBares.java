@@ -90,18 +90,18 @@ public class ManejadorBares implements Services {
         Bar a=new Bar();
         a.setId(0);
         a.setName("Donde Gladys");
-        a.setDescripcion("bla bla bla bla bla bla bla bla bla bla bla bla ");
+        a.setDescripcion("Este bar y restaurante es ideal para disfrutar de la rumba de los años 60 y 70 con música en vivo, perfecta para los nostálgicos.");
         a.setDireccion("cll falsa #123");
         a.setTipo("barraLibre");
         a.setGenero("Metal");
         addBar(a);
         Bar b=new Bar();
         b.setId(1);
-        b.setName("Donde Gladys VIP");
-        b.setDescripcion("bla bla bla bla bla bla bla bla bla bla bla bla ");
-        b.setDireccion("cll falsa #123");
+        b.setName("Mondrian Bar");
+        b.setDescripcion("es una nueva propuesta para las noches bogotanas donde disfrutarás de la mejor música del momento, tanto anglo como latina en dos salas, una para cada momento de la noche.");
+        b.setDireccion("Cra.14a No. 83 – 49");
         b.setTipo("normal");
-        b.setGenero("reggae");
+        b.setGenero("Crossover");
         addBar(b);
     }
 }
