@@ -67,6 +67,11 @@ public class ManejadorBares implements Services {
         return bares.get(id).getDescripcion();
     }
 
+    public String getGeneroById(int id) {
+        if(id>=bares.size())return null;
+        return bares.get(id).getGenero();
+    }
+
     public String getTipoById(int id) {
         if(id>=bares.size())return null;
         return bares.get(id).getTipo();
@@ -87,12 +92,16 @@ public class ManejadorBares implements Services {
         a.setName("Donde Gladys");
         a.setDescripcion("bla bla bla bla bla bla bla bla bla bla bla bla ");
         a.setDireccion("cll falsa #123");
+        a.setTipo("barraLibre");
+        a.setGenero("Metal");
         addBar(a);
         Bar b=new Bar();
         b.setId(1);
         b.setName("Donde Gladys");
         b.setDescripcion("bla bla bla bla bla bla bla bla bla bla bla bla ");
         b.setDireccion("cll falsa #123");
+        b.setTipo("normal");
+        b.setGenero("reggae");
         addBar(b);
     }
 }

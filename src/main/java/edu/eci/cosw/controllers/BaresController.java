@@ -87,6 +87,13 @@ public class BaresController {
         return new ResponseEntity<>(direccion,HttpStatus.ACCEPTED);
     }
 
+    @RequestMapping(path = "/{id}/genero", method = RequestMethod.GET)
+    public ResponseEntity<?> generoById(@PathVariable int id){
+        String genero = manejadorBares.getGeneroById(id);
+        if(genero==null)return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(genero,HttpStatus.ACCEPTED);
+    }
+
     @RequestMapping(path = "/{id}/coordenadas", method = RequestMethod.GET)
     public ResponseEntity<?> coordenadasById(@PathVariable int id){
         Coordenada coordenada = manejadorBares.getCoordenadas(id);

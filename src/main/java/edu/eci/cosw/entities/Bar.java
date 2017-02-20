@@ -12,6 +12,19 @@ public class Bar {
     String horario;
     String direccion;
     String tipo;
+    String Genero;
+    float longitud;
+    float latitud;
+
+
+    public String getGenero() {
+        return Genero;
+    }
+
+    public void setGenero(String genero) {
+        Genero = genero;
+    }
+
 
     public String getTipo() {
         return tipo;
@@ -21,8 +34,7 @@ public class Bar {
         this.tipo = tipo;
     }
 
-    float longitud;
-    float latitud;
+
 
     public float getLongitud() {
         return longitud;
