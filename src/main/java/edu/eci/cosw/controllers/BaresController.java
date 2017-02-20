@@ -66,6 +66,13 @@ public class BaresController {
         return new ResponseEntity<>(horario,HttpStatus.ACCEPTED);
     }
 
+    @RequestMapping(path = "/{id}/tipo", method = RequestMethod.GET)
+    public ResponseEntity<?> tipoById(@PathVariable int id){
+        String tipo = manejadorBares.getTipoById(id);
+        if(tipo==null)return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(tipo,HttpStatus.ACCEPTED);
+    }
+
     @RequestMapping(path = "/{id}/descripcion", method = RequestMethod.GET)
     public ResponseEntity<?> descripcionById(@PathVariable int id){
         String descripcion = manejadorBares.getDescripcionById(id);
