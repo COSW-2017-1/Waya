@@ -349,7 +349,21 @@ function initMap() {
     });
   }
 
-  var features = [
+  $.get("/bares").then(function(data){
+    var features=[];
+    for(var i = 0; bar=data[i] ; i++){
+        //console.log(bar);
+        features.push({
+            position: new google.maps.LatLng(bar.latitud, bar.longitud),
+            type: bar.tipo
+        });
+    }
+    for (var i = 0, feature; feature = features[i]; i++) {
+        //console.log(feature);
+        addMarker(feature);
+    }
+  });
+  /*var features = [
     {
       position: new google.maps.LatLng(4.669070, -74.055216),
       type: 'cover'
@@ -364,7 +378,7 @@ function initMap() {
 
   for (var i = 0, feature; feature = features[i]; i++) {
     addMarker(feature);
-  }
+  }*/
 
   var infoWindow = new google.maps.InfoWindow({map: map});
 

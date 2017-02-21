@@ -13,11 +13,14 @@
           <input type="text" required="required" class="SBform SBinput" placeholder="Direccion" ng-model="direccion"/>
           <input type="text" required="required" class="SBform SBinput" placeholder="URL Logo" ng-model="logo"/>
           <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
-            <input type="text" required="required" class="SBform SBinput" placeholder="Cordenada latitud" ng-model="latitud" />
+            <input type="number" step="any" required="required" class="SBform SBinput" placeholder="Cordenada latitud" ng-model="latitud" />
           </div>
           <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
-            <input type="text" required="required" class="SBform SBinput" placeholder="Cordenada longitud" ng-model="longitud"/>
+            <input type="number" step="any" required="required" class="SBform SBinput" placeholder="Cordenada longitud" ng-model="longitud"/>
           </div>
+        </div>
+        <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+          <input type="text" required="required" class="SBform SBinput" placeholder="Tipo" ng-model="tipo"/>
         </div>
         <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
           <textarea class="SBform SBtextarea"  placeholder="Descripcion" ng-model="descripcion"></textarea>
@@ -30,7 +33,3 @@
   </div>
 
 </div>
-
-
-
-<br>

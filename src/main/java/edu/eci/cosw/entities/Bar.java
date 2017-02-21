@@ -13,8 +13,8 @@ public class Bar {
     String direccion;
     String tipo;
     String Genero;
-    float longitud;
-    float latitud;
+    double longitud;
+    double latitud;
 
 
     public String getGenero() {
@@ -36,19 +36,19 @@ public class Bar {
 
 
 
-    public float getLongitud() {
+    public double getLongitud() {
         return longitud;
     }
 
-    public void setLongitud(float longitud) {
+    public void setLongitud(double longitud) {
         this.longitud = longitud;
     }
 
-    public float getLatitud() {
+    public double getLatitud() {
         return latitud;
     }
 
-    public void setLatitud(float latitud) {
+    public void setLatitud(double latitud) {
         this.latitud = latitud;
     }
 

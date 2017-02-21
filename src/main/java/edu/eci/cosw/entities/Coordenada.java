@@ -4,28 +4,28 @@ package edu.eci.cosw.entities;
  * Created by david on 18/02/2017.
  */
 public class Coordenada {
-    float longitud;
-    float latitud;
+    double longitud;
+    double latitud;
 
     public Coordenada(){}
 	
-	public Coordenada(float latitud, float longitud){
+	public Coordenada(double latitud, double longitud){
         this.longitud=longitud;
         this.latitud=latitud;
     }
-    public float getLongitud() {
+    public double getLongitud() {
         return longitud;
     }
 
-    public void setLongitud(float longitud) {
+    public void setLongitud(double longitud) {
         this.longitud = longitud;
     }
 
-    public float getLatitud() {
+    public double getLatitud() {
         return latitud;
     }
 
-    public void setLatitud(float latitud) {
+    public void setLatitud(double latitud) {
         this.latitud = latitud;
     }
 }
