@@ -331,10 +331,10 @@ function initMap() {
   var iconBase = 'img/vector/';
   var icons = {
     cover: {
-        icon: iconBase + 'All.png'
+        icon: iconBase + 'Cover.png'
     },
     freebar: {
-        icon: iconBase + 'Cover.png'
+        icon: iconBase + 'All.png'
     },
     normal: {
         icon: iconBase + 'Drink.png'

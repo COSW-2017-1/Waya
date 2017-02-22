@@ -2,8 +2,8 @@
 <br>
 <br>
 <br>
-<h1>Consulta los Bares que hay en la app</h1>
-<p>En esta vista podras econtrar tu bar ideal </p>
+<h1>Consulta los Bares que tenemos registrados</h1>
+<p>Aquí podrás encontrar el bar perfecto para ti</p>
 <p>
  Vuelve Pronto
 </p>
@@ -13,7 +13,7 @@
   <article class="SBpost" ng-repeat="todo in listado | orderBy:propertyName:reverse">
     <div class="SBdescripcion">
       <figure class="SBimagen">
-        <img src="imagenes/foto.jpg" />
+        <img src="/bares/{{todo.id}}/logo"/>
       </figure>
       <div class="SBdetalles">
         <h2 class="SBtitulo">

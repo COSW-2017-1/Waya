@@ -88,6 +88,7 @@ public class ManejadorBares implements Services {
     }
     private void agregarEjemplo(){
         Bar a=new Bar();
+        a.setLogo("https://upload.wikimedia.org/wikipedia/commons/b/b4/JPEG_example_JPG_RIP_100.jpg");
         a.setId(0);
         a.setName("Donde Gladys");
         a.setDescripcion("Este bar y restaurante es ideal para disfrutar de la rumba de los años 60 y 70 con música en vivo, perfecta para los nostálgicos.");
@@ -98,6 +99,7 @@ public class ManejadorBares implements Services {
         a.setLongitud(-74.055216);
         addBar(a);
         Bar b=new Bar();
+        b.setLogo("https://upload.wikimedia.org/wikipedia/commons/b/b4/JPEG_example_JPG_RIP_100.jpg");
         b.setId(1);
         b.setName("Mondrian Bar");
         b.setDescripcion("Es una nueva propuesta para las noches bogotanas donde disfrutarás de la mejor música del momento, tanto anglo como latina en dos salas, una para cada momento de la noche.");
