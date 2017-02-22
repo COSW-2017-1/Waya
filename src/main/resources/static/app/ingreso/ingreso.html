@@ -6,18 +6,19 @@
                     <h2 class="lato-bold" style="padding-bottom: 15px;">Login</h2>
                     <hr class="resalt">
                     <br>
-                    <form style="padding-top: 15px;">
+                    <form role="form" ng-submit="login()" style="padding-top: 15px;">
                         <div class="form-group">
                             <label class="lato ligth-green-grey" for="email">Correo electrónico</label>
-                            <input type="email" class="form-control custom-form" id="maili" placeholder="Enter email">
+                            <input type="text" class="form-control custom-form" id="maili" placeholder="Enter email"  ng-model="credentials.username">
                         </div>
                         <div class="form-group" style="padding-top: 15px;">
                             <label class="lato ligth-green-grey" for="pwd">Contraseña</label>
-                            <input type="password" class="form-control custom-form" id="pwdi" placeholder="Enter password">
+                            <input type="password" class="form-control custom-form" id="pwdi" placeholder="Enter password" ng-model="credentials.password">
                         </div>
                         <a><p class="lato-bold" style="color: #FFB969">Olvidaste tu contraseña?</p></a>
                         <button type="submit" class="btn btn-default btn-lr lato-bold">login</button>
                     </form>
+
                 </div>
             </div>
 
