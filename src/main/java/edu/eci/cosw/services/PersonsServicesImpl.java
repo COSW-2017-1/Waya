@@ -1,6 +1,6 @@
-package edu.eci.cosw.repository;
+package edu.eci.cosw.services;
 
-import edu.eci.cosw.entities.User;
+import edu.eci.cosw.entities.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -16,23 +16,23 @@ import java.util.List;
  * Created by Juan Pablo on 18/02/2017.
  */
 @Service
-public class UsersRepository implements  UsersRepositoryInterface{
-
-    HashMap<String, User> users = new HashMap<>();
+public class PersonsServicesImpl implements PersonsServices{
+    HashMap<String, Person> users = new HashMap<>();
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
 
     @Override
-    public User findByUsername(String username) {
+    public Person findByUsername(String username) {
         return users.get(username);
     }
 
     @Override
-    public void save(User user) {
-
+    public void save(Person user) {
+    /*
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
         authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+
         user.setAuthorities(authorities);
 
         UserDetails newUser = new org.springframework.security.core.userdetails.User(user.getUsername()
@@ -40,5 +40,6 @@ public class UsersRepository implements  UsersRepositoryInterface{
                 , user.getAuthorities());
 
         users.put(user.getUsername(), user);
+    */
     }
 }

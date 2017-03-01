@@ -1,7 +1,8 @@
 package edu.eci.cosw.controllers;
 
-import edu.eci.cosw.entities.User;
-import edu.eci.cosw.services.UsersServices;
+import edu.eci.cosw.entities.Person;
+import edu.eci.cosw.security.services.SecurityServices;
+import edu.eci.cosw.services.PersonsServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,9 +18,11 @@ import java.security.Principal;
  */
 @RestController
 @RequestMapping("/app/user")
-public class UsersController {
+public class PersonsController {
     @Autowired
-    UsersServices usersServices;
+    PersonsServices personsServices;
+    @Autowired
+    private SecurityServices securityServices;
 
     @RequestMapping(method = RequestMethod.GET)
     public Principal user(Principal user) {
@@ -27,10 +30,13 @@ public class UsersController {
     }
 
     @RequestMapping(path = "/registrer", method = RequestMethod.POST)
-    public ResponseEntity<?> registrerUser(@RequestBody User user) {
+    public ResponseEntity<?> registrerUser(@RequestBody Person user) {
         System.out.println("->>> " + user.getUsername());
-        usersServices.save(user);
-        User newUser = user;
+        personsServices.save(user);
+        Person newUser = user;
+
+        securityServices.autologin(user.getUsername(), user.getPassword());
+
         return new ResponseEntity<>(newUser,HttpStatus.ACCEPTED);
     }
 
