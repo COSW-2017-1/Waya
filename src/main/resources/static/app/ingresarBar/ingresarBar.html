@@ -20,7 +20,14 @@
           </div>
         </div>
         <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
-          <input type="text" required="required" class="SBform SBinput" placeholder="Tipo" ng-model="tipo"/>
+          <select  name="Genero" class="form-control">
+            <option ng-model="tipo">Salsa</option>
+            <option ng-model="tipo">Bachata</option>
+            <option ng-model="tipo">Rock</option>
+            <option ng-model="tipo">Crossover</option>
+            <option ng-model="tipo">Vallenato</option>
+            <option ng-model="tipo">Cantina</option>
+          </select>
         </div>
         <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
           <textarea class="SBform SBtextarea"  placeholder="Descripcion" ng-model="descripcion"></textarea>
