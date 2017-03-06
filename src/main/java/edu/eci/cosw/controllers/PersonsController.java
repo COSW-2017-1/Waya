@@ -31,13 +31,14 @@ public class PersonsController {
 
     @RequestMapping(path = "/registrer", method = RequestMethod.POST)
     public ResponseEntity<?> registrerUser(@RequestBody Person user) {
-        System.out.println("->>> " + user.getUsername());
+        System.out.println("username->>> " + user.getUsername());
+        System.out.println("password->>> " + user.getPassword());
         personsServices.save(user);
         Person newUser = user;
 
-        securityServices.autologin(user.getUsername(), user.getPassword());
+        //securityServices.autologin(user.getUsername(), user.getPassword());
 
-        return new ResponseEntity<>(newUser,HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(newUser, HttpStatus.ACCEPTED);
     }
 
 }
