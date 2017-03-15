@@ -49,6 +49,8 @@
           <li><a href="#!/ingresarBar">Registro de Bares</a></li>
           <li><a href="#!/obtenerBares">Buscar bares</a> </li>
 
+          <li><a href="#!/registro">Registro</a> </li>
+
           <button ng-show="!authenticated" onclick="window.location.href='#!/ingreso'" class="btn btn-success navbar-btn">Ingresa</button>
           <button  ng-controller="LogOutController" ng-show="authenticated" class="btn btn-success navbar-btn"
                                                         ng-click="logout($event)" >Cerrar sesíon</button>
@@ -91,6 +93,7 @@
     <script src="app.js"></script>
     <script src="landing/landing.js"></script>
     <script src="ingreso/ingreso.js"></script>
+    <script src="registro/registro.js"></script>
     <script src="mapsSearch/mapsSearch.js"></script>
     <script src="mapsSearch/maps.js"></script>
     <script src="ingresarBar/ingresarBar.js"></script>

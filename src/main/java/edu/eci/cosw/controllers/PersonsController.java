@@ -1,11 +1,16 @@
 package edu.eci.cosw.controllers;
 
 import edu.eci.cosw.entities.Person;
-import edu.eci.cosw.security.services.SecurityServices;
 import edu.eci.cosw.services.PersonsServices;
+import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,7 +27,7 @@ public class PersonsController {
     @Autowired
     PersonsServices personsServices;
     @Autowired
-    private SecurityServices securityServices;
+    private UserDetailsService userDetailsManager;
 
     @RequestMapping(method = RequestMethod.GET)
     public Principal user(Principal user) {
@@ -30,15 +35,27 @@ public class PersonsController {
     }
 
     @RequestMapping(path = "/registrer", method = RequestMethod.POST)
-    public ResponseEntity<?> registrerUser(@RequestBody Person user) {
-        System.out.println("username->>> " + user.getUsername());
-        System.out.println("password->>> " + user.getPassword());
+    public ResponseEntity<?> registrerUser(@RequestBody Person user, HttpServletRequest request) {
         personsServices.save(user);
         Person newUser = user;
-
-        //securityServices.autologin(user.getUsername(), user.getPassword());
-
+        autoLogin(user.getUsername(), request);
         return new ResponseEntity<>(newUser, HttpStatus.ACCEPTED);
+    }
+
+    private boolean autoLogin(String username, HttpServletRequest request){
+        boolean result = false;
+
+        try
+        {
+            request.getSession();
+            UserDetails user = userDetailsManager.loadUserByUsername(username);
+            Authentication auth = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
+            SecurityContextHolder.getContext().setAuthentication(auth);
+            result = true;
+
+        }catch (Exception e) { System.out.println(e.getMessage()); }
+
+        return result;
     }
 
 }
