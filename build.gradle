@@ -45,5 +45,6 @@ dependencies {
 	compile('javax.servlet:javax.servlet-api')
 
 	compile("com.h2database:h2")
+	compile ("mysql:mysql-connector-java:5.1.38")
 
 }

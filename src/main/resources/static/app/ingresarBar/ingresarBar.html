@@ -20,13 +20,21 @@
           </div>
         </div>
         <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
-          <select  name="Genero" class="form-control">
-            <option ng-model="tipo">Salsa</option>
-            <option ng-model="tipo">Bachata</option>
-            <option ng-model="tipo">Rock</option>
-            <option ng-model="tipo">Crossover</option>
-            <option ng-model="tipo">Vallenato</option>
-            <option ng-model="tipo">Cantina</option>
+          <select  name="Genero" class="form-control" ng-model="genero">
+            <option value="Salsa">Salsa</option>
+            <option value="Bachata">Bachata</option>
+            <option value="Rock">Rock</option>
+            <option value="Crossover">Crossover</option>
+            <option value="Vallenato">Vallenato</option>
+            <option value="Cantina">Cantina</option>
+            <option value="Metal">Metal</option>
+          </select>
+        </div>
+        <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+          <select name="Tipo" class="form-control" ng-model="tipo">
+            <option value="normal">Normal</option>
+            <option value="freebar">Barra libre</option>
+            <option value="cover">Cover</option>
           </select>
         </div>
         <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">

@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by david on 11/02/2017.
  */
-public interface Services {
+public interface BaresServices {
 
     List<Bar> getBares();
 
@@ -28,4 +28,8 @@ public interface Services {
     String getDireccion(int id);
 
     Coordenada getCoordenadas(int id);
+
+    String getGeneroById(int id);
+
+    String getTipoById(int id);
 }

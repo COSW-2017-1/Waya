@@ -4,10 +4,7 @@ import edu.eci.cosw.entities.Bar;
 import edu.eci.cosw.entities.Coordenada;
 import org.springframework.stereotype.Service;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -16,11 +13,11 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * Created by david on 11/02/2017.
  */
 @Service
-public class ManejadorBares implements Services {
+public class BaresServicesStub implements BaresServices {
 
     private List<Bar> bares;
 
-    public ManejadorBares(){
+    public BaresServicesStub(){
 
         bares=new CopyOnWriteArrayList<>();
         agregarEjemplo();

@@ -2,7 +2,7 @@ package edu.eci.cosw.controllers;
 
 import edu.eci.cosw.entities.Bar;
 import edu.eci.cosw.entities.Coordenada;
-import edu.eci.cosw.services.ManejadorBares;
+import edu.eci.cosw.services.BaresServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpStatus;
@@ -20,9 +20,9 @@ import java.io.InputStream;
 public class BaresController {
 
     @Autowired
-    private ManejadorBares manejadorBares;
+    private BaresServices manejadorBares;
 
-    public void setManejadorBares(ManejadorBares manejadorBares) {
+    public void setManejadorBares(BaresServices manejadorBares) {
         this.manejadorBares = manejadorBares;
     }
 
