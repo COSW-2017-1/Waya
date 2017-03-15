@@ -1,8 +1,15 @@
 package edu.eci.cosw.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * Created by david on 11/02/2017.
  */
+@Entity
+@Table(name="BARES")
 public class Bar {
 
     String logo;
@@ -17,6 +24,7 @@ public class Bar {
     double latitud;
 
 
+    @Column(name = "genero")
     public String getGenero() {
         return genero;
     }
@@ -25,6 +33,7 @@ public class Bar {
         this.genero = genero;
     }
 
+    @Column(name = "tipo")
     public String getTipo() {
         return tipo;
     }
@@ -33,6 +42,7 @@ public class Bar {
         this.tipo = tipo;
     }
 
+    @Column(name = "longitud")
     public double getLongitud() {
         return longitud;
     }
@@ -41,6 +51,7 @@ public class Bar {
         this.longitud = longitud;
     }
 
+    @Column(name = "latitud")
     public double getLatitud() {
         return latitud;
     }
@@ -49,6 +60,7 @@ public class Bar {
         this.latitud = latitud;
     }
 
+    @Column(name = "direccion")
     public String getDireccion() {
         return direccion;
     }
@@ -59,6 +71,7 @@ public class Bar {
 
     public Bar(){}
 
+    @Column(name = "logo")
     public String getLogo() {
         return logo;
     }
@@ -67,6 +80,7 @@ public class Bar {
         this.logo = logo;
     }
 
+    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -75,6 +89,8 @@ public class Bar {
         this.name = name;
     }
 
+    @Column(name = "id")
+    @Id
     public int getId() {
         return id;
     }
@@ -83,6 +99,7 @@ public class Bar {
         this.id = id;
     }
 
+    @Column(name = "descripcion")
     public String getDescripcion() {
         return descripcion;
     }
@@ -91,6 +108,7 @@ public class Bar {
         this.descripcion = descripcion;
     }
 
+    @Column(name = "horario")
     public String getHorario() {
         return horario;
     }
