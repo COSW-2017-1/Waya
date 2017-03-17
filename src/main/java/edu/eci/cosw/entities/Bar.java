@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Set;
 
 /**
  * Created by david on 11/02/2017.
@@ -22,7 +23,15 @@ public class Bar {
     String genero;
     double longitud;
     double latitud;
+    Set<Multimedia> multimedia;
 
+    public Set<Multimedia> getMultimedia() {
+        return multimedia;
+    }
+
+    public void setMultimedia(Set<Multimedia> multimedia) {
+        this.multimedia = multimedia;
+    }
 
     @Column(name = "genero")
     public String getGenero() {
