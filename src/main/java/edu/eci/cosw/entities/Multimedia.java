@@ -11,7 +11,9 @@ import java.util.Date;
  * Created by david on 17/03/2017.
  */
 @Entity
+@IdClass(Multimedia.class)
 @Table(name = "MULTIMEDIA")
+
 public class Multimedia implements Serializable{
 
     Date fechaYHora;
