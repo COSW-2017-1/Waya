@@ -14,6 +14,7 @@
     <property name="use_sql_comments">true</property>
 
     <mapping class="edu.eci.cosw.entities.Bar"></mapping>
+    <mapping class="edu.eci.cosw.entities.Multimedia"></mapping>
   </session-factory>
     
 </hibernate-configuration>

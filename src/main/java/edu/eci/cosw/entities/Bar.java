@@ -1,9 +1,7 @@
 package edu.eci.cosw.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -23,8 +21,11 @@ public class Bar {
     String genero;
     double longitud;
     double latitud;
-    Set<Multimedia> multimedia;
 
+    Set<Multimedia> multimedia=new HashSet<>();
+
+    @ManyToMany
+    @JoinColumn(name = "bar", referencedColumnName = "id", nullable = false)
     public Set<Multimedia> getMultimedia() {
         return multimedia;
     }
