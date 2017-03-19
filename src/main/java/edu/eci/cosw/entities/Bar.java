@@ -1,6 +1,7 @@
 package edu.eci.cosw.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -9,7 +10,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name="BARES")
-public class Bar {
+public class Bar implements Serializable{
 
     String logo;
     String name;
@@ -24,8 +25,35 @@ public class Bar {
 
     Set<Multimedia> multimedia=new HashSet<>();
 
-    @ManyToMany
-    @JoinColumn(name = "bar", referencedColumnName = "id", nullable = false)
+    public Bar(String logo, String name, int id, String descripcion, String horario, String direccion, String tipo, String genero, double longitud, double latitud, Set<Multimedia> multimedia) {
+        this.logo = logo;
+        this.name = name;
+        this.id = id;
+        this.descripcion = descripcion;
+        this.horario = horario;
+        this.direccion = direccion;
+        this.tipo = tipo;
+        this.genero = genero;
+        this.longitud = longitud;
+        this.latitud = latitud;
+        this.multimedia = multimedia;
+    }
+
+    public Bar(String logo, String name, int id, String descripcion, String horario, String direccion, String tipo, String genero, double longitud, double latitud) {
+        this.logo = logo;
+        this.name = name;
+        this.id = id;
+        this.descripcion = descripcion;
+        this.horario = horario;
+        this.direccion = direccion;
+        this.tipo = tipo;
+        this.genero = genero;
+        this.longitud = longitud;
+        this.latitud = latitud;
+    }
+
+    @OneToMany
+    @JoinColumn(name = "bar", referencedColumnName = "id", nullable = false, insertable = false, updatable = false)
     public Set<Multimedia> getMultimedia() {
         return multimedia;
     }

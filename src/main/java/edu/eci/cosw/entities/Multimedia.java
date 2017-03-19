@@ -11,31 +11,34 @@ import java.util.Date;
  * Created by david on 17/03/2017.
  */
 @Entity
-@IdClass(Multimedia.class)
 @Table(name = "MULTIMEDIA")
 
 public class Multimedia implements Serializable{
 
     Date fechaYHora;
     Blob multimedia;
-    int bar;
+    MultimediaId id;
 
-    @Column(name = "bar")
-    @Id
-    public int getBar() {
-        return bar;
+    @EmbeddedId
+    public MultimediaId getId() {
+        return id;
     }
 
-    public void setBar(int bar) {
-        this.bar = bar;
+    public void setId(MultimediaId id) {
+        this.id = id;
+    }
+
+    public Multimedia(Date fechaYHora, Blob multimedia, MultimediaId id) {
+        this.fechaYHora = fechaYHora;
+        this.multimedia = multimedia;
+        this.id = id;
     }
 
     public Multimedia() {
     }
 
     @JsonIgnore
-    @Column(name = "multimedia")
-    @Id
+    @Column(name = "multimedia", nullable = false)
     public Blob getMultimedia() {
         return multimedia;
     }
@@ -44,10 +47,9 @@ public class Multimedia implements Serializable{
         this.multimedia = multimedia;
     }
 
-    @Column(name = "fechayhora")
+    @Column(name = "fechayhora", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     @GeneratedValue
-    @Id
     public Date getFechaYHora() {
 
         return fechaYHora;
@@ -57,4 +59,18 @@ public class Multimedia implements Serializable{
         this.fechaYHora = fechaYHora;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Multimedia)) return false;
+
+        Multimedia that = (Multimedia) o;
+
+        return id.equals(that.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return id.hashCode();
+    }
 }
