@@ -19,7 +19,7 @@ public class MultimediaServicesImpl implements MultimediaServices {
 
     @Override
     public List<Multimedia> getMultimediaByBar(int bar) {
-        return multimediaRepository.findAll();
+        return multimediaRepository.getMultimediaByBar(bar);
     }
 
     @Override
