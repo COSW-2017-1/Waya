@@ -15,7 +15,7 @@ public class multimediaController {
 
     //@Autowired
     private MultimediaServices multimediaServices;
-    @RequestMapping(path = "/{id}", method = RequestMethod.GET)
+    @RequestMapping(path = "/{numero}", method = RequestMethod.GET)
     @ResponseBody
     public ResponseEntity<Multimedia> getMultimedia(@PathVariable("numero") int numero,@PathVariable("bar")int bar) {
         MultimediaId a=new MultimediaId(bar,numero);
