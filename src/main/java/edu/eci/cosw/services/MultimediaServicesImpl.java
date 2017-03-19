@@ -4,7 +4,6 @@ import edu.eci.cosw.entities.Multimedia;
 import edu.eci.cosw.entities.MultimediaId;
 import edu.eci.cosw.repository.MultimediaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
@@ -20,26 +19,26 @@ public class MultimediaServicesImpl implements MultimediaServices {
 
     @Override
     public List<Multimedia> getMultimediaByBar(int bar) {
-        return null;
+        return multimediaRepository.findAll();
     }
 
     @Override
     public Multimedia getById(MultimediaId multimediaId) {
-        return null;
+        return multimediaRepository.findOne(multimediaId);
     }
 
     @Override
     public Date getFecha(MultimediaId multimediaId) {
-        return null;
+        return multimediaRepository.findOne(multimediaId).getFechaYHora();
     }
 
     @Override
     public void SaveMultimedia(Multimedia multimedia) {
-
+        multimediaRepository.saveAndFlush(multimedia);
     }
 
     @Override
     public void deleteMultimedia(MultimediaId multimedia) {
-
+       multimediaRepository.delete(multimedia);
     }
 }

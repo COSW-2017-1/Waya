@@ -1,9 +1,10 @@
 package edu.eci.cosw.controllers;
 
+import edu.eci.cosw.entities.Multimedia;
+import edu.eci.cosw.entities.MultimediaId;
 import edu.eci.cosw.services.MultimediaServices;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by david on 17/03/2017.
@@ -14,4 +15,12 @@ public class multimediaController {
 
     //@Autowired
     private MultimediaServices multimediaServices;
+    @RequestMapping(path = "/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity<Multimedia> getMultimedia(@PathVariable("numero") int numero,@PathVariable("bar")int bar) {
+        MultimediaId a=new MultimediaId(bar,numero);
+
+        return ResponseEntity.ok().body(multimediaServices.getById(a));
+
+    }
 }
