@@ -1,0 +1,19 @@
+<br><br>
+<br><br>
+<div ng-controller="RegistroCtrl">
+    <form ng-submit="registrer()" novalidate>
+        Username:<br>
+        <input type="text" ng-model="user.username"><br>
+        Password:<br>
+        <input type="text" ng-model="user.password"><br>
+        First Name:<br>
+        <input type="text" ng-model="user.details.firstName"><br>
+        Last Name:<br>
+        <input type="text" ng-model="user.details.lastName"><br>
+        Phone Number:<br>
+        <input type="text" ng-model="user.details.phoneNumber"><br>
+        <br><br>
+        <button>Registrar</button>
+    </form>
+    <p>form = {{user}}</p>
+</div>

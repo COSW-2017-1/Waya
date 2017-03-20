@@ -9,6 +9,7 @@ angular.module('myApp', [
   'myApp.ingreso',
   'myApp.mapsSearch',
   'myApp.obtenerBares',
+  'myApp.registro',
   'services.listFactory',
   'myApp.version'
 ])
