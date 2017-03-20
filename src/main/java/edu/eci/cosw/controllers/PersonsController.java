@@ -1,7 +1,7 @@
 package edu.eci.cosw.controllers;
 
-import edu.eci.cosw.entities.User;
-import edu.eci.cosw.services.UsersServices;
+import edu.eci.cosw.entities.Person;
+import edu.eci.cosw.services.PersonsServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,9 +17,9 @@ import java.security.Principal;
  */
 @RestController
 @RequestMapping("/app/user")
-public class UsersController {
+public class PersonsController {
     @Autowired
-    UsersServices usersServices;
+    PersonsServices personsServices;
 
     @RequestMapping(method = RequestMethod.GET)
     public Principal user(Principal user) {
@@ -27,11 +27,11 @@ public class UsersController {
     }
 
     @RequestMapping(path = "/registrer", method = RequestMethod.POST)
-    public ResponseEntity<?> registrerUser(@RequestBody User user) {
-        System.out.println("->>> " + user.getUsername());
-        usersServices.save(user);
-        User newUser = user;
-        return new ResponseEntity<>(newUser,HttpStatus.ACCEPTED);
+    public ResponseEntity<?> registrerUser(@RequestBody Person user) {
+        personsServices.save(user);
+        Person newUser = user;
+
+        return new ResponseEntity<>(newUser, HttpStatus.ACCEPTED);
     }
 
 }
