@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 public interface MultimediaRepository extends JpaRepository<Multimedia,MultimediaId> {
 
-    @Query("Select distinct multimedia from Multimedia as multimedia where multimedia.bar = ?1")
+    @Query("Select distinct multimedia from Multimedia as multimedia where multimedia.id.bar = ?1")
     List<Multimedia> getMultimediaByBar(int bar);
 }
 
