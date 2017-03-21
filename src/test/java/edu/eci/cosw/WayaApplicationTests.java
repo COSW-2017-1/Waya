@@ -1,13 +1,17 @@
 package edu.eci.cosw;
 
 import edu.eci.cosw.entities.Bar;
+import edu.eci.cosw.repository.BarsRepository;
+import edu.eci.cosw.repository.MultimediaRepository;
+import edu.eci.cosw.services.BaresServices;
+import edu.eci.cosw.services.MultimediaServices;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
-
 import java.util.LinkedList;
 import java.util.List;
 
@@ -18,6 +22,16 @@ public class WayaApplicationTests {
 	/**
 	 * Estan son las pruebas de la logica , haría falta los repositorios cuando este la base de datos
 	 */
+	/*@Autowired
+	MultimediaServices multimediaServices;
+
+	@Autowired
+	MultimediaRepository multimediaRepository;
+	@Autowired
+	BaresServices baresServices;
+
+	@Autowired
+	BarsRepository barsRepository;*/
 
 	List<Bar>bares=new LinkedList<>();
 	@Test

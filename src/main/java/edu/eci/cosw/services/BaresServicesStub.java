@@ -12,7 +12,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 /**
  * Created by david on 11/02/2017.
  */
-@Service
+//@Service
 public class BaresServicesStub implements BaresServices {
 
     private List<Bar> bares;

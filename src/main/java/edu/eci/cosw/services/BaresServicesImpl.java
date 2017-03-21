@@ -4,6 +4,7 @@ import edu.eci.cosw.entities.Bar;
 import edu.eci.cosw.entities.Coordenada;
 import edu.eci.cosw.repository.BarsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -12,6 +13,7 @@ import java.util.List;
 /**
  * Created by estudiante on 3/15/17.
  */
+@Service
 public class BaresServicesImpl implements BaresServices{
 
     @Autowired

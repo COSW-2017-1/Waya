@@ -5,8 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-//@EnableJpaRepositories("edu.eci.cosw.repository")
-//@EntityScan("edu.eci.cosw.entities")
+@EnableJpaRepositories("edu.eci.cosw.repository")
+@EntityScan("edu.eci.cosw.entities")
 @SpringBootApplication
 public class WayaApplication {
 

@@ -4,6 +4,7 @@ import edu.eci.cosw.entities.Multimedia;
 import edu.eci.cosw.entities.MultimediaId;
 import edu.eci.cosw.repository.MultimediaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.List;
 /**
  * Created by User on 18/03/2017.
  */
-//@Service
+@Service
 public class MultimediaServicesImpl implements MultimediaServices {
 
     @Autowired
