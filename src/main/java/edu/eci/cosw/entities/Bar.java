@@ -129,6 +129,7 @@ public class Bar implements Serializable{
 
     @Column(name = "id")
     @Id
+    @GeneratedValue
     public int getId() {
         return id;
     }

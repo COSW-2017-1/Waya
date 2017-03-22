@@ -20,7 +20,6 @@ public class BaresServicesStub implements BaresServices {
     public BaresServicesStub(){
 
         bares=new CopyOnWriteArrayList<>();
-        agregarEjemplo();
     }
 
     public List<Bar> getBares() {
@@ -83,7 +82,7 @@ public class BaresServicesStub implements BaresServices {
         if(id>=bares.size())return null;
         return new Coordenada(bares.get(id).getLatitud(),bares.get(id).getLongitud());
     }
-    private void agregarEjemplo(){
+    public void agregarEjemplo(){
         Bar a=new Bar();
         a.setLogo("https://upload.wikimedia.org/wikipedia/commons/b/b4/JPEG_example_JPG_RIP_100.jpg");
         a.setId(0);
