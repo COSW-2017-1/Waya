@@ -5,10 +5,13 @@ import edu.eci.cosw.entities.Multimedia;
 import edu.eci.cosw.entities.MultimediaId;
 import edu.eci.cosw.services.MultimediaServices;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -48,11 +51,19 @@ public class MultimediaController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<?> postMultimedia(@RequestBody Multimedia multimedia){
-        if(multimediaServices.getById(multimedia.getId())!=null){
+    public ResponseEntity<?> postMultimedia(@RequestBody Multimedia multimedia) {
+        if (multimediaServices.getById(multimedia.getId()) != null) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         multimediaServices.SaveMultimedia(multimedia);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
+    }
+
+    @RequestMapping(path = "/{bar}/{numero}/video", method = RequestMethod.GET)
+    public ResponseEntity<InputStreamResource> getVideoFromMultimediaById(@PathVariable int bar, @PathVariable int numero){
+        InputStream toReturn = multimediaServices.getContentOfMultimedia(new MultimediaId(bar,numero));
+        if(toReturn==null)return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        return ResponseEntity.ok().contentType(MediaType.parseMediaType(MediaType.APPLICATION_OCTET_STREAM_VALUE))
+                .body(new InputStreamResource(toReturn));
     }
 }

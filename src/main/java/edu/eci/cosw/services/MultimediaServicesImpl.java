@@ -6,6 +6,8 @@ import edu.eci.cosw.repository.MultimediaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.InputStream;
+import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
@@ -42,4 +44,16 @@ public class MultimediaServicesImpl implements MultimediaServices {
     public void deleteMultimedia(MultimediaId multimedia) {
        multimediaRepository.delete(multimedia);
     }
+
+    @Override
+    public InputStream getContentOfMultimedia(MultimediaId multimediaId) {
+        if(multimediaRepository.findOne(multimediaId)==null)return null;
+        try {
+            return multimediaRepository.findOne(multimediaId).getMultimedia().getBinaryStream();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 }
