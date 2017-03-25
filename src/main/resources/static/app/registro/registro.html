@@ -1,19 +1,25 @@
-<br><br>
-<br><br>
-<div ng-controller="RegistroCtrl">
-    <form ng-submit="registrer()" novalidate>
-        Username:<br>
-        <input type="text" ng-model="user.username"><br>
-        Password:<br>
-        <input type="text" ng-model="user.password"><br>
-        First Name:<br>
-        <input type="text" ng-model="user.details.firstName"><br>
-        Last Name:<br>
-        <input type="text" ng-model="user.details.lastName"><br>
-        Phone Number:<br>
-        <input type="text" ng-model="user.details.phoneNumber"><br>
-        <br><br>
-        <button>Registrar</button>
-    </form>
-    <p>form = {{user}}</p>
+<div class="container">
+        <div class="margen-top-bot-ingreso">
+            <div class="" ng-controller="RegistroCtrl">
+                <h2 class="lato-bold" style="padding-bottom: 15px;">Regístrate, es fácil.</h2>
+                <hr class="resalt">
+                <br>
+                <form ng-submit="registrer()" novalidate>
+                    <label class="lato ligth-green-grey">Username*</label>
+                    <input class="form-control custom-form" type="text" ng-model="user.username"><br>
+                    <label class="lato ligth-green-grey">Contraseña*</label>
+                    <input class="form-control custom-form" type="text" ng-model="user.password"><br>
+                    <label class="lato ligth-green-grey">Nombre</label>
+                    <input class="form-control custom-form" type="text" ng-model="user.details.firstName"><br>
+                    <label class="lato ligth-green-grey">Apellido</label>
+                    <input class="form-control custom-form" type="text" ng-model="user.details.lastName"><br>
+                    <label class="lato ligth-green-grey">Número de teléfono</label>
+                    <input class="form-control custom-form" type="text" ng-model="user.details.phoneNumber"><br>
+                    <label class="lato ligth-red-grey">* estos campos son obligatorios</label><br>
+                    <br>
+                    <button class="btn btn-default btn-lr lato-bold">Registrar</button>
+                </form>
+                <p>form = {{user}}</p>
+            </div>
+        </div>
 </div>

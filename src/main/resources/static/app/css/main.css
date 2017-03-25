@@ -35,6 +35,10 @@
     color: #4D735E;
 }
 
+.ligth-red-grey{
+    color: #EF9A9A;
+}
+
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
@@ -283,7 +287,7 @@ input:-webkit-autofill {
 }
 .SBposts .SBpost{
   background:#fff;
-  border-radius:0 0 .5em .5em;
+  border-radius: .5em .5em .5em .5em;
   box-shadow:2px 2px 10px rgba(0,0,0,0.5);
   color:#7a7a7a;
   margin-bottom:.5em;
@@ -320,7 +324,7 @@ input:-webkit-autofill {
 }
 .SBposts .SBpost .SBdescripcion .SBimagen{
   float:left;
-  margin: 25px
+  margin: 25px;
 }
 .SBposts .SBpost .SBdescripcion .SBimagen img{
   height:160px;

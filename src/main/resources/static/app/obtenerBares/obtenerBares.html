@@ -2,23 +2,25 @@
 <br>
 <br>
 <br>
-<h1>Consulta los Bares que tenemos registrados</h1>
-<p>Aquí podrás encontrar el bar perfecto para ti</p>
-<p>
- Vuelve Pronto
-</p>
+<h2 class="lato-bold" style="padding-bottom: 15px;">Consulta los Bares que tenemos registrados</h2>
+<hr class="resalt">
+<br>
+<h1></h1>
+<p>Aquí podrás encontrar el bar perfecto para ti.</p>
 
 <section class="SBposts">
 
   <article class="SBpost" ng-repeat="todo in listado | orderBy:propertyName:reverse">
     <div class="SBdescripcion">
       <figure class="SBimagen">
-        <img src="/bares/{{todo.id}}/logo"/>
+        <img class="img-circle" src="/bares/{{todo.id}}/logo"/>
       </figure>
       <div class="SBdetalles">
-        <h2 class="SBtitulo">
+        <h2 class="lato-bold" style="padding-bottom: 15px; color=#000">
           {{todo.name}}
         </h2>
+        <hr class="resalt">
+        <br>
         <a class="SBa SBtag" href="#">{{todo.tipo}}</a>
         <a class="SBa SBtag" href="#">{{todo.genero}}</a>
         <p class="SBdireccion">{{todo.direccion}}</p>
