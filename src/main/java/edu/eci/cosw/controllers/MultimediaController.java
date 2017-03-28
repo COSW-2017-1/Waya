@@ -5,7 +5,9 @@ import edu.eci.cosw.entities.Multimedia;
 import edu.eci.cosw.entities.MultimediaId;
 import edu.eci.cosw.services.MultimediaServices;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -14,6 +16,7 @@ import javax.sql.rowset.serial.SerialBlob;
 import java.sql.Blob;
 import java.util.Date;
 import java.util.Iterator;
+import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -82,7 +85,11 @@ public class MultimediaController {
     }
 
 
-
-
-
+    @RequestMapping(path = "/{bar}/{numero}/video", method = RequestMethod.GET)
+    public ResponseEntity<InputStreamResource> getVideoFromMultimediaById(@PathVariable int bar, @PathVariable int numero){
+        InputStream toReturn = multimediaServices.getContentOfMultimedia(new MultimediaId(bar,numero));
+        if(toReturn==null)return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        return ResponseEntity.ok().contentType(MediaType.parseMediaType(MediaType.APPLICATION_OCTET_STREAM_VALUE))
+                .body(new InputStreamResource(toReturn));
+    }
 }

@@ -29,4 +29,17 @@ angular.module('services.listFactory', ['ngRoute', 'ngResource'])
                 console.log("sirvio---------------------------------------------------------------");
             });
         }
-    }]);
+    }])
+    .factory('baresFabrica', function(bares) {
+        return {
+            buscar: function (texto) {
+                console.log("entrooooooooo a buscar");
+                bares.query(function(resp){
+                    console.log(texto);
+                    console.log(resp);
+                });
+            },
+            parseBuscar: function (todo) {
+                bares.query();
+            }};
+    });

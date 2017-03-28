@@ -32,4 +32,6 @@ public interface BaresServices {
     String getGeneroById(int id);
 
     String getTipoById(int id);
+
+    void agregarEjemplo();
 }

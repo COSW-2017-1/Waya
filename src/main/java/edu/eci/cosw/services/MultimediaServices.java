@@ -2,8 +2,8 @@ package edu.eci.cosw.services;
 
 import edu.eci.cosw.entities.Multimedia;
 import edu.eci.cosw.entities.MultimediaId;
-import org.springframework.stereotype.Service;
 
+import java.io.InputStream;
 import java.util.Date;
 import java.util.List;
 
@@ -17,5 +17,6 @@ public interface MultimediaServices {
  Date getFecha(MultimediaId multimediaId);
  void SaveMultimedia(Multimedia multimedia);
  void deleteMultimedia(MultimediaId multimedia);
+ InputStream getContentOfMultimedia(MultimediaId multimediaId);
 
 }

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.InputStream;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -88,5 +89,30 @@ public class BaresServicesImpl implements BaresServices{
     public String getTipoById(int id) {
         if(bars.findOne(id)==null)return null;
         return bars.findOne(id).getTipo();
+    }
+
+    public void agregarEjemplo(){
+        Bar a=new Bar();
+        a.setLogo("https://upload.wikimedia.org/wikipedia/commons/b/b4/JPEG_example_JPG_RIP_100.jpg");
+        a.setId(0);
+        a.setName("Donde Gladys");
+        a.setDescripcion("Este bar y restaurante es ideal para disfrutar de la rumba de los años 60 y 70 con música en vivo, perfecta para los nostálgicos.");
+        a.setDireccion("cll falsa #123");
+        a.setTipo("freebar");
+        a.setGenero("Metal");
+        a.setLatitud(4.669070);
+        a.setLongitud(-74.055216);
+        addBar(a);
+        Bar b=new Bar();
+        b.setLogo("https://upload.wikimedia.org/wikipedia/commons/b/b4/JPEG_example_JPG_RIP_100.jpg");
+        b.setId(1);
+        b.setName("Mondrian Bar");
+        b.setDescripcion("Es una nueva propuesta para las noches bogotanas donde disfrutarás de la mejor música del momento, tanto anglo como latina en dos salas, una para cada momento de la noche.");
+        b.setDireccion("Cra.14a No. 83 – 49");
+        b.setTipo("normal");
+        b.setGenero("Crossover");
+        b.setLatitud(4.668912);
+        b.setLongitud(-74.055302);
+        addBar(b);
     }
 }
