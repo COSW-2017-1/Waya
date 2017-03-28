@@ -8,6 +8,8 @@
 <h1></h1>
 <p>Aquí podrás encontrar el bar perfecto para ti.</p>
 
+<input type="text" required="required" class="SBform SBinput" placeholder="Buscar" ng-model="data" ng-change="buscar()" />
+
 <section class="SBposts">
 
   <article class="SBpost" ng-repeat="todo in listado | orderBy:propertyName:reverse">

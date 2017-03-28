@@ -24,14 +24,19 @@ angular.module('myApp.obtenerBares', ['ngRoute'])
 }]);
 
 */
-.controller('obtenerBaresCtrl', ['$scope', 'bares', function($scope, bares) {
+.controller('obtenerBaresCtrl', ['$scope', 'bares', 'baresFabrica', function($scope, bares, baresFabrica) {
         $scope.listado= bares.query();
         $scope.propertyName = 'name';
+        $scope.data ="";
         $scope.reverse = true;
         $scope.sortBy = function(propertyName) {
             $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
             $scope.propertyName = propertyName;
           };
+        $scope.buscar = function(){
+            baresFabrica.buscar($scope.data);
+        };
+
 
 
 

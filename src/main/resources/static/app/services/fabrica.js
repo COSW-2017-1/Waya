@@ -14,5 +14,18 @@ angular.module('services.listFactory', ['ngRoute', 'ngResource'])
             }};
     })
     .factory('bares', function($resource) {
-                return $resource('/bares/:id');
-            });
+        return $resource('/bares/:id');
+    })
+    .factory('baresFabrica', function(bares) {
+        return {
+            buscar: function (texto) {
+                console.log("entrooooooooo a buscar");
+                bares.query(function(resp){
+                    console.log(texto);
+                    console.log(resp);
+                });
+            },
+            parseBuscar: function (todo) {
+                bares.query();
+            }};
+    });
