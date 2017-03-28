@@ -62,6 +62,7 @@ public class MultimediaController {
     )
     public ResponseEntity uploadFile(MultipartHttpServletRequest request,@PathVariable int bar) {
         System.out.println(bar);
+        bar = 1;
 
         try {
             Iterator<String> itr = request.getFileNames();
@@ -88,6 +89,7 @@ public class MultimediaController {
 
     @RequestMapping(path = "/{bar}/{numero}/video", method = RequestMethod.GET)
     public ResponseEntity<InputStreamResource> getVideoFromMultimediaById(@PathVariable int bar, @PathVariable int numero){
+        System.out.println("-------------"+bar+"  "+numero+"-----------------");
         InputStream toReturn = multimediaServices.getContentOfMultimedia(new MultimediaId(bar,numero));
         if(toReturn==null)return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         return ResponseEntity.ok().contentType(MediaType.parseMediaType(MediaType.APPLICATION_OCTET_STREAM_VALUE))

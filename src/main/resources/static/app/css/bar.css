@@ -1,0 +1,532 @@
+
+.cf {
+  zoom: 1; }
+
+.cf:after,
+.cf:before {
+  content: ' ';
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+.SBespacio{
+    height:10%;
+}
+.SB-bar-tags{
+   padding: 1em;
+}
+.SBno-list{
+   list-style: none;
+   display: inline;
+   
+}
+.SBanchoTotal{
+ width: 100%;
+}
+#SBcontainer{min-height:90%;position:relative;margin-top:5%;}
+div#content{padding-bottom:194px;}
+div#content .strong{color:#212328;}
+div#content header{padding:0 60px 60px;}
+div#content #pfd{padding:60px 0}
+div#content #pfd img {
+    width: 80%
+}
+div#content #preamble,
+div#content article {
+    max-width: 1200px
+}
+div#content #preamble h1,
+div#content article h1 {
+    color: #212328;
+    font: 300 22px/1.2em Source Sans Pro, sans-serif;
+    padding-bottom: 1em
+}
+div#content #preamble h2,
+div#content article h2 {
+    color: #80807e;
+    font: 300 15px/1.4em museo-sans, sans-serif;
+    padding-bottom: 1em
+}
+div#content #preamble h3,
+div#content article h3 {
+    color: #212328;
+    font: 300 15px/1.4em museo-sans, sans-serif
+}
+div#content #preamble p,
+div#content article p {
+    color: #80807e;
+    font: 300 15px/1.2em Source Sans Pro, sans-serif;
+    padding-bottom: 1em
+}
+div#content #preamble p.space-after,
+div#content article p.space-after {
+    padding-bottom: 50px
+}
+div#content #preamble .em,
+div#content article .em {
+    color: #80807e;
+    font: 300 22px/1.2em Source Sans Pro, sans-serif;
+    padding-bottom: 1em
+}
+div#content #preamble a,
+div#content article a {
+    border-bottom: 1px solid #212328;
+    color: #212328;
+    text-decoration: none
+}
+div#content #preamble a:hover,
+div#content article a:hover {
+    border-bottom-color: #80807e;
+    color: #80807e
+}
+div#content #preamble.home h1 {
+    color: #80807e
+}
+div#content #our-work {
+    zoom: 1
+}
+div#content #our-work:after,
+div#content #our-work:before {
+    content: ' ';
+    display: table
+}
+div#content #our-work:after {
+    clear: both
+}
+div#content #our-work {
+    margin-bottom: 0
+}
+div#content #our-work ul {
+    list-style: none;
+}
+div#content #our-work ul li {
+    display: block;
+    float: left;
+    height: 359px;
+    width: 449px;
+    position: relative
+}
+div#content #our-work ul li a {
+    text-decoration: none
+}
+div#content #our-work ul li img {
+    width: 100%
+}
+div#content #our-work ul li .overlay {
+    background-color: rgba(248, 129, 75, .9);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+div#content #our-work ul li .overlay:hover {
+    background-color: rgba(248, 129, 75, .9);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 1;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+div#content #our-work ul li .overlay summary {
+    bottom: 30px;
+    left: 60px;
+    padding-right: 30px;
+    position: absolute
+}
+div#content #our-work ul li .overlay summary h2 {
+    background: url(../images/pfd-sprites.png) no-repeat left bottom;
+    color: #fff;
+    font: 400 20px/1em Source Sans Pro, sans-serif;
+    padding-bottom: 15px
+}
+div#content #our-work ul li .overlay summary h3 {
+    color: #813815;
+    font: 300 15px/0.9em Source Sans Pro, sans-serif;
+    padding-top: 12px
+}
+div#content #our-work ul li .overlay .loves {
+    -moz-borderradius: 40px;
+    -webkit-borderradius: 40px;
+    background-color: #fff;
+    border-radius: 40px;
+    height: 80px;
+    position: absolute;
+    right: 60px;
+    text-align: center;
+    top: 60px;
+    width: 80px
+}
+div#content #our-work ul li .overlay .loves span {
+    background: transparent url(../images/pfd-sprites.png) no-repeat right -121px;
+    color: #ed7b47;
+    font: 300 15px/1.4em museo-sans, sans-serif;
+    line-height: 80px;
+    padding-right: 25px
+}
+div#content #pfd-work {
+    position: relative;
+    zoom: 1
+}
+div#content #pfd-work footer {
+    bottom: -80px;
+    padding: 50px 60px 0;
+    position: absolute;
+    right: 0
+}
+div#content #pfd-work footer #other-projects {
+    float: right;
+    list-style: none
+}
+div#content #pfd-work footer #other-projects li video{
+    float: left;
+    margin-left: 12px
+}
+div#content #pfd-work footer #other-projects a {
+    background: #f8f8f8 url(../images/pfd-sprites.png) no-repeat;
+    display: block;
+    height: 30px;
+    text-indent: -8000px;
+    width: 34px
+}
+div#content #pfd-work footer #other-projects a.previous-work {
+    background-position: 0 -30px
+}
+div#content #pfd-work footer #other-projects a.next-work {
+    background-position: 0 -60px
+}
+div#content #pfd-work:after,
+div#content #pfd-work:before {
+    content: ' ';
+    display: table
+}
+div#content #pfd-work:after {
+    clear: both
+}
+div#content #work-bio {
+    left: 0;
+    position: fixed;
+    top: 10%;
+    width: 40%
+}
+div#content #work-bio #preamble h1 {
+    line-height: 1em;
+    padding-bottom: 0
+}
+div#content #work-bio #preamble h2,
+div#content #work-bio #preamble p.space-after {
+    padding-bottom: 50px
+}
+div#content #work-bio #links {
+    height: 80px;
+    list-style: none;
+    margin: 40px 0;
+}
+div#content #work-bio #links li video {
+    float: left;
+    margin-right: 40px
+}
+div#content #work-bio #links #ilovethis {
+    -moz-borderradius: 40px;
+    -webkit-borderradius: 40px;
+    background-color: #fc3e3c;
+    border-radius: 40px;
+    cursor: pointer;
+    display: block;
+    height: 80px;
+    text-align: center;
+    width: 80px;
+    margin: auto;
+}
+div#content #work-bio #links #ilovethis span {
+    background: transparent url(../images/pfd-sprites.png) no-repeat right -201px;
+    color: #fff;
+    font: 300 15px/1.4em museo-sans, sans-serif;
+    line-height: 80px;
+    padding-right: 25px
+}
+div#content #work-bio #links #ilovethis.unloved,
+div#content #work-bio #links #ilovethis:hover {
+    background: #212328 url(../images/pfd-sprites.png) no-repeat 10px -170px
+}
+div#content #work-bio #links #ilovethis.unloved span,
+div#content #work-bio #links #ilovethis:hover span {
+    display: none
+}
+div#content #work-bio #links #ilovethis.loved:hover {
+    background-image: none
+}
+div#content #work-bio #links #ilovethis.loved:hover span {
+    display: inline;
+}
+div#content #work-bio #links #home {
+    -moz-borderradius: 40px;
+    -webkit-borderradius: 40px;
+    background: #fc3e3c url(../images/pfd-sprites.png) no-repeat 50% -250px;
+    border-radius: 40px;
+    cursor: pointer;
+    display: block;
+    height: 80px;
+    text-indent: -8000px;
+    width: 80px
+}
+div#content #work-visuals {
+    float: right;
+    width: 60%
+}
+div#content #work-visuals ul {
+    list-style: none
+}
+div#content #work-visuals ul li{
+    line-height: 0;
+    margin-bottom: 10px
+}
+div#content #work-visuals ul li img{
+    width: 100%
+}
+div#content #work-visuals ul li video{
+    width: 100%
+}
+div#content #preamble a.read-more {
+    border-style: none;
+    color: #212328;
+    font: 300 15px/1.4em Source Sans Pro, sans-serif;
+    text-decoration: none
+}
+div#content #preamble a.read-more:hover {
+    color: #80807e
+}
+section #what-we-do header {
+    background: transparent url(../images/grass.jpg) no-repeat 50% top fixed;
+    padding: 0 60px
+}
+div#content #what-we-do header #preamble {
+    padding-bottom: 60px
+}
+section #what-we-do article {
+    padding: 120px 60px
+}
+section #what-we-do article h2 {
+    color: #212328;
+    font: 300 22px/1.2em Source Sans Pro, sans-serif
+}
+div#content footer#msf {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%
+}
+footer#msf .wrapper {
+    border-top: 1px solid #e4e4e4;
+    height: 73px;
+    margin: 0 60px
+}
+footer#msf ul#lets-be-social {
+    float: left;
+    width: 230px;
+    list-style: none
+}
+footer#msf ul#lets-be-social li {
+    float: left;
+    padding-right: 8px
+}
+footer#msf div#legal {
+    float: right;
+    font: 400 15px/1em Source Sans Pro, sans-serif;
+    text-align: right;
+    width: 300px
+}
+footer#msf div#legal span {
+    padding-right: 36px
+}
+footer#msf li a,
+footer#msf span {
+    line-height: 73px
+}
+footer#msf #legal span {
+    line-height: 20px;
+    margin-top: 20px;
+    display: block;
+    background: url(../images/footer-198seven.png) right center no-repeat
+}
+footer#msf a {
+    font: 300 14px museo-sans, sans-serif;
+    text-decoration: none
+}
+footer#msf a:hover {
+    color: #80807e
+}
+nav#toc {
+    background-color: #212328;
+    height: 100%;
+    position: fixed;
+    right: -240px;
+    top: 0;
+    width: 240px
+}
+nav#toc ul {
+    list-style: none;
+    padding: 60px 40px 0
+}
+nav#toc ul li {
+    border-top: 1px solid #424650;
+    padding: 4px 0 5px
+}
+nav#toc ul li a {
+    color: #80807e;
+    font: 300 15px/2em museo-sans, sans-serif;
+    text-decoration: none
+}
+nav#toc ul li a.active,
+nav#toc ul li a:hover {
+    color: #fff
+}
+nav#toc ul li:first-child {
+    border-top: none
+}
+nav#toc a#toc-actuator {
+    background: #f8f8f8 url(../images/pfd-sprites.png) no-repeat left top;
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    left: -94px;
+    position: absolute;
+    text-indent: -8000px;
+    top: 60px;
+    width: 34px;
+    z-index: 5000
+}
+@media screen and (max-width: 1200px) {
+    footer#msf .wrapper {
+        margin: 0 30px
+    }
+    div#content header {
+        padding: 0 30px 60px
+    }
+    div#content #pfd {
+        padding-top: 30px
+    }
+    div#content #our-work ul li .overlay summary {
+        left: 30px
+    }
+    div#content #our-work ul li .overlay .loves {
+        right: 30px;
+        top: 30px
+    }
+    div#content #pfd-work footer {
+        padding: 50px 30px 0
+    }
+    div#content #what-we-do header {
+        padding: 0 30px
+    }
+    div#content #what-we-do article {
+        padding: 120px 30px
+    }
+    div#content #what-we-do #web-design .parallax {
+        background: #ededeb url(/images/web-development-med.jpg) no-repeat 50% 0!important;
+        height: 750px
+    }
+    div#content #what-we-do #identity article {
+        padding: 120px 30px
+    }
+    nav#toc ul {
+        padding-top: 30px
+    }
+    nav#toc a#toc-actuator {
+        left: -64px;
+        top: 30px
+    }
+}
+@media screen and (max-width: 768px) {
+    div#content #work-bio {
+        float: none;
+        position: relative;
+        width: auto
+    }
+    div#content #work-visuals {
+        float: none;
+        width: auto
+    }
+    div#content #pfd-work #links {
+        display: none
+    }
+    div#content #what-we-do section {
+        height: auto!important
+    }
+    div#content #what-we-do section article {
+        padding: 60px 30px
+    }
+    div#content #what-we-do #web-design .parallax {
+        background: #ededeb url(/images/web-development-sm.jpg) no-repeat 50% 0!important;
+        height: 460px
+    }
+    div#content #what-we-do #identity {
+        border-bottom: none
+    }
+    div#content #what-we-do #identity article {
+        padding: 60px 30px
+    }
+    div#content #pfd-about #example-photographs li,
+    div#content #what-we-do #photography #example-photographs li {
+        width: 100%!important
+    }
+    div#content p.em {
+        font: 300 15px/1.4em museo-sans, sans-serif!important
+    }
+}
+@media screen and (max-width: 460px) {
+    div#content {
+        padding-bottom: 234px
+    }
+    div#content #what-we-do #photography #example-photographs li {
+        min-height: 50px
+    }
+    footer#msf .wrapper {
+        padding: 20px 0
+    }
+    footer#msf ul#lets-be-social {
+        float: none;
+        width: auto;
+        zoom: 1
+    }
+    footer#msf ul#lets-be-social:after,
+    footer#msf ul#lets-be-social:before {
+        content: ' ';
+        display: table
+    }
+    footer#msf ul#lets-be-social:after {
+        clear: both
+    }
+    footer#msf div#legal {
+        float: none;
+        width: auto
+    }
+    footer#msf div#legal span {
+        display: block;
+        padding-left: 0;
+        text-align: left
+    }
+    footer#msf li a,
+    footer#msf span {
+        line-height: 2em
+    }
+}
