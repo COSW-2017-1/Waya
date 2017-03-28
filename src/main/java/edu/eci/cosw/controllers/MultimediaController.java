@@ -57,10 +57,11 @@ public class MultimediaController {
     }
 
     @RequestMapping(
-            value = "/{bar}",
+            path = "/{bar}",
             method = RequestMethod.POST
     )
     public ResponseEntity uploadFile(MultipartHttpServletRequest request,@PathVariable int bar) {
+        System.out.println(bar);
 
         try {
             Iterator<String> itr = request.getFileNames();

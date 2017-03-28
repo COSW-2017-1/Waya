@@ -14,7 +14,7 @@ angular.module('myApp.pruebaMultimedia', ['ngRoute'])
         $scope.agregar = function() {
             var file = $scope.myFile;
             console.log(file);
-            var uploadUrl = 'http://localhost:8080/multimedia/0';
+            var uploadUrl = 'http://localhost:8080/multimedia/1';
             fileUpload.uploadFileToUrl(file, uploadUrl);
         };
 }])
