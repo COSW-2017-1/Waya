@@ -69,10 +69,7 @@ public class MultimediaController {
                 String filename = file.getOriginalFilename();
                 byte[] bytes = file.getBytes();
                 Blob multimediaCreated= new SerialBlob(bytes);
-                synchronized (bar){
-                    int numero = multimediaServices.getMultimediaByBar(bar).size();
-                    multimediaServices.SaveMultimedia(new Multimedia(new Date(),mimeType,multimediaCreated,new MultimediaId(bar,numero)));
-                }
+                multimediaServices.SaveMultimedia(new Multimedia(new Date(),mimeType,multimediaCreated,new MultimediaId(bar)));
             }
         }
         catch (Exception e) {
