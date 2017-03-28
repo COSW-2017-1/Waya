@@ -56,33 +56,30 @@ public class MultimediaController {
         return ResponseEntity.ok().body(toReturn);
     }
 
-    @RequestMapping(
-            path = "/{bar}",
-            method = RequestMethod.POST
-    )
-    public ResponseEntity uploadFile(MultipartHttpServletRequest request,@PathVariable int bar) {
+    @RequestMapping(path = "/{bar}", method = RequestMethod.POST)
+    public ResponseEntity<?> uploadFile(@PathVariable Integer bar, MultipartHttpServletRequest request) {
         System.out.println(bar);
-
         try {
             Iterator<String> itr = request.getFileNames();
             System.out.println(request.toString());
-
             while (itr.hasNext()) {
                 String uploadedFile = itr.next();
                 MultipartFile file = request.getFile(uploadedFile);
                 String mimeType = file.getContentType();
                 String filename = file.getOriginalFilename();
                 byte[] bytes = file.getBytes();
-                Blob bb= new SerialBlob(bytes);
-                System.out.println(mimeType+"--------------------------------------------------------------------------------------------");
-                multimediaServices.SaveMultimedia(new Multimedia(new Date(),mimeType,bb,new MultimediaId(bar,10)));
+                Blob multimediaCreated= new SerialBlob(bytes);
+                synchronized (bar){
+                    int numero = multimediaServices.getMultimediaByBar(bar).size();
+                    multimediaServices.SaveMultimedia(new Multimedia(new Date(),mimeType,multimediaCreated,new MultimediaId(bar,numero)));
+                }
             }
         }
         catch (Exception e) {
-            return new ResponseEntity<>("{}", HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>("", HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
-        return new ResponseEntity<>("{}", HttpStatus.OK);
+        return new ResponseEntity<>("", HttpStatus.CREATED);
     }
 
 
