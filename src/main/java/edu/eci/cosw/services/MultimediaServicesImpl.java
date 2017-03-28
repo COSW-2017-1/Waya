@@ -36,7 +36,8 @@ public class MultimediaServicesImpl implements MultimediaServices {
     }
 
     @Override
-    public void SaveMultimedia(Multimedia multimedia) {
+    public synchronized void SaveMultimedia(Multimedia multimedia) {
+        multimedia.getId().setNumero(getMultimediaByBar(multimedia.getId().getBar()).size());
         multimediaRepository.saveAndFlush(multimedia);
     }
 

@@ -2,6 +2,7 @@ package edu.eci.cosw.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.GeneratedValue;
 import java.io.Serializable;
 
 /**
@@ -16,6 +17,10 @@ public class MultimediaId implements Serializable{
     public MultimediaId(int bar, int numero) {
         this.bar = bar;
         this.numero = numero;
+    }
+
+    public MultimediaId(int bar){
+        this.bar = bar;
     }
 
     public MultimediaId() {
