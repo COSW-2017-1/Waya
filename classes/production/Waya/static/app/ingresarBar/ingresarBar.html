@@ -1,0 +1,50 @@
+<div class="SBpage">
+  <h1>Ingresar Bar</h1>
+  <p>¡Bienvenido! has parte de la comunidad Waya</p>
+  <p>Registra tu bar aquí es muy fácil</p>
+
+  <div class="inner SBcontact">
+    <div class="contact-form">
+      <form>
+        <div class="col-xs-12 wow animated slideInLeft" data-wow-delay=".5s">
+          <input type="text" required="required" class="SBform SBinput" placeholder="Nombre" ng-model="name" />
+        </div>
+        <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+          <input type="text" required="required" class="SBform SBinput" placeholder="Direccion" ng-model="direccion"/>
+          <input type="text" required="required" class="SBform SBinput" placeholder="URL Logo" ng-model="logo"/>
+          <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+            <input type="number" step="any" required="required" class="SBform SBinput" placeholder="Cordenada latitud" ng-model="latitud" />
+          </div>
+          <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+            <input type="number" step="any" required="required" class="SBform SBinput" placeholder="Cordenada longitud" ng-model="longitud"/>
+          </div>
+        </div>
+        <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+          <select  name="Genero" class="form-control" ng-model="genero">
+            <option value="Salsa">Salsa</option>
+            <option value="Bachata">Bachata</option>
+            <option value="Rock">Rock</option>
+            <option value="Crossover">Crossover</option>
+            <option value="Vallenato">Vallenato</option>
+            <option value="Cantina">Cantina</option>
+            <option value="Metal">Metal</option>
+          </select>
+        </div>
+        <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+          <select name="Tipo" class="form-control" ng-model="tipo">
+            <option value="normal">Normal</option>
+            <option value="freebar">Barra libre</option>
+            <option value="cover">Cover</option>
+          </select>
+        </div>
+        <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+          <textarea class="SBform SBtextarea"  placeholder="Descripcion" ng-model="descripcion"></textarea>
+        </div>
+        <div class="relative fullwidth col-xs-12">
+          <button type="button" class="SBform-btn semibold" ng-click="add()">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,335 @@
+.kaushan{
+	font-family: 'Kaushan Script', cursive;
+	color: white;
+}
+
+.lato{
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+}
+
+.lato-bold{
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+}
+
+.custom-form{
+    border-radius: 0px;
+    height: 45px;
+    width: 70%;
+    border-color: #a8dbbf;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.btn-lr{
+    border-radius: 0px;
+    border-color: #4D735E;
+    border-style: solid;
+    border-width: 3px;
+    height: 45px;
+    width: 70%;
+}
+
+.ligth-green-grey{
+    color: #4D735E;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+.roboto{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.catamaran{
+	font-family: 'Catamaran', sans-serif;
+}
+
+.blanco{
+	color: white;
+}
+
+.bg-grey{
+    background-color: #e1ede6;
+}
+
+.resalt{
+    float: left;
+    width: 110px;
+    height: 6px;
+    background: #FFB969;
+    margin: auto;
+}
+
+.jumbotron{
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.home-bg{
+    color: white;
+	background-repeat: repeat;
+	background-image: url('../img/patron.png'), #7b4397;
+    /* fallback for old browsers */
+    background-image: url('../img/patron.png'), -webkit-linear-gradient(to left, #7b4397, #dc2430);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background-image: url('../img/patron.png'), linear-gradient(to left, #7b4397, #dc2430);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.white-bg{
+	background-color: #FAFAFA;
+}
+
+.contenido{
+	padding-top: 5%;
+}
+
+.bg-orange{
+    background-color: #FF5722;
+}
+
+.margen-top-bot-ingreso{
+    padding-top: 15%;
+    padding-bottom: 17%;
+}
+
+.loginregform{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#myNavbar > ul > li > a{
+	color: white;
+}
+
+#myNavbar > ul > li > a:focus, #myNavbar > ul > li > a:hover, #myNavbar > ul > li > a:focus .active{
+	color: #fdcc52;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar{
+	margin-bottom: 0;
+}
+
+.affix-top{
+	background-color: rgba(0, 0, 0, 0.6);
+	border-color: rgba(0, 0, 0, 0);
+}
+
+.affix{
+	background-color: black;
+	border-color: rgba(0, 0, 0, 0.6);
+}
+
+.pink-bg{
+	background-color:  #FF5722;
+}
+
+.header-t{
+	font-size: 48px;
+}
+
+.cell-bg{
+	padding-bottom: 150%;
+	margin-top: 35%;
+	background-image: url('../img/cel.png');
+	background-repeat: no-repeat;
+	background-size: 100% 400px;
+}
+
+.aa-bg{
+	padding-bottom: 200%;
+	background-image: url('../img/androidapple.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 160%;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+.contenido-mapas{
+    padding-top: 3%;
+}
+
+.contenido-mapas-bares{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.neon{
+	color: #fff;
+	-webkit-animation: neon6 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon6 1.5s ease-in-out infinite alternate;
+  	animation: neon6 1.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes neon6 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+  }
+}
+
+.btna-outline.active, .btna-outline:active, .btna-outline:focus, .btna-outline:hover {
+    color: #fff;
+    background-color: #fdcc52;
+    border-color: #fdcc52;
+    text-decoration: none;
+}
+
+.btna {
+    border-radius: 17px;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.btna-outline {
+    color: #fff;
+    border: 1.5px solid;
+}
+
+.footer > div > ul > li > a{
+	color: #BDBDBD;
+}
+
+.footer{
+	padding-top: 1%;
+	padding-bottom: 0.5%;
+	text-align: center;
+	color: #BDBDBD;
+	background-color: #212121;
+}
+
+
+/* Input Styles */
+.SBcontact{
+    padding:10px 0 10px;
+  }
+
+.SBform{
+    width: 100%;
+    padding: 15px;
+    background:#f8f8f8;
+    border:1px solid rgba(0, 0, 0, 0.075);
+    margin-bottom:25px;
+    color:#727272 !important;
+    font-size:13px;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+
+.SBform:hover{
+    border:1px solid #8BC3A3;
+  }
+
+.SBform:focus{
+    color: white;
+    outline: none;
+    border:1px solid #8BC3A3;
+  }
+
+.SBtextarea{
+    height: 200px;
+    max-height: 200px;
+    max-width: 100%;
+  }
+
+.SBform-btn{
+    width:180px;
+    display: block;
+    height: auto;
+    padding:15px;
+    color:#fff;
+    background:#8BC3A3;
+    border:none;
+    border-radius:3px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin:auto;
+    box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  }
+
+.SBform-btn:hover{
+    background:#111;
+    color: white;
+    border:none;
+  }
+.SBform-btn:active{
+    opacity: 0.9;
+  }
+.SBinput {
+    position: relative;
+    z-index: 9999;
+}
+.SBpage{
+    padding-top: 4em;
+    height: 40em;
+}
+
+.SBa{
+  color:#dd4f24
+}
+.SBposts{
+  padding:.5em;
+}
+.SBposts .SBpost{
+  background:#fff;
+  border-radius:0 0 .5em .5em;
+  box-shadow:2px 2px 10px rgba(0,0,0,0.5);
+  color:#7a7a7a;
+  margin-bottom:.5em;
+  overflow: hidden;
+}
+.SBposts .SBpost .SBdescripcion .SBdetalles{
+  height:160px;
+  margin-left:170px;
+}
+.SBposts .SBpost .SBdescripcion .SBdetalles .SBdireccion{
+  float:right;
+  margin:.3em 1em .3em .3em;
+}
+.SBposts .SBpost .SBdescripcion .SBdetalles .SBdes{
+  float: left;
+  margin: .3em;
+  width:
+  border: 1px solid red;
+
+}
+.SBposts .SBpost .SBdescripcion .SBdetalles .SBtag{
+  background:#22bce0;
+  border-radius:.5em;
+  color:#fff;
+  padding:.2em .5em;
+  text-decoration:none
+}
+.SBposts .SBpost .SBdescripcion .SBdetalles .SBtitulo{
+  color:#444;
+  font-size:1.1em;
+  font-style:italic;
+  margin:0;
+  padding:.5em .5em 0 0;
+}
+.SBposts .SBpost .SBdescripcion .SBimagen{
+  float:left;
+  margin: 25px
+}
+.SBposts .SBpost .SBdescripcion .SBimagen img{
+  height:160px;
+  vertical-align:top;
+  width:120px;
+}
+@media screen and (min-width: 768px){
+.SBposts .SBpost{display:inline-block !important;width:48%;vertical-align:top;}
+.SBposts .SBpost:nth-child(odd){margin-right:2%}
+}
+
+

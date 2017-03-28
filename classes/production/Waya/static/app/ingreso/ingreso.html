@@ -1,0 +1,45 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 margen-top-bot-ingreso">
+            <div class="loginregform">
+                <h2 class="lato-bold" style="padding-bottom: 15px;">Login</h2>
+                <hr class="resalt">
+                <br>
+                <form role="form" ng-submit="login()" style="padding-top: 15px;">
+                    <div class="form-group">
+                        <label class="lato ligth-green-grey" for="email">Correo electrónico</label>
+                        <input type="text" class="form-control custom-form" id="maili" placeholder="Enter email"  ng-model="credentials.username">
+                    </div>
+                    <div class="form-group" style="padding-top: 15px;">
+                        <label class="lato ligth-green-grey" for="pwd">Contraseña</label>
+                        <input type="password" class="form-control custom-form" id="pwdi" placeholder="Enter password" ng-model="credentials.password">
+                    </div>
+                    <a><p class="lato-bold" style="color: #FFB969">Olvidaste tu contraseña?</p></a>
+                    <button type="submit" class="btn btn-default btn-lr lato-bold">login</button>
+                </form>
+
+            </div>
+        </div>
+        <div class="col-md-6 bg-grey margen-top-bot-ingreso">
+            <div class="loginregform">
+                <h2 class="lato-bold" style="padding-bottom: 15px;">Nuevo en Waya?</h2>
+                <hr class="resalt">
+                <br>
+                <p class="lato" style="padding-top: 15px; font-size: 15px;;">¡Puedes ingresar a revisar todos los bares cercanos a tu ubicación, seleccionar su información y revisar el estado actual del bar revisando contenido multimedia subido por nuestros usuarios con una ventana de tiempo de 15 minutos!</p>
+                <ul class="nav" style="padding-top: 15px">
+                    <li><p class="lato-bold"><span class="glyphicon glyphicon-ok"></span> Perfil adapatado a tus gustos.</p></li>
+                    <li><p class="lato-bold"><span class="glyphicon glyphicon-ok"></span> Consulta horarios y tipos de bares.</p></li>
+                    <li><p class="lato-bold"><span class="glyphicon glyphicon-ok"></span> Aumenta puntos para ganar recompensas.</p></li>
+                </ul>
+                <form style="padding-top: 15px;">
+                    <div class="form-group" style="padding-bottom: 15px;">
+                        <label class="lato ligth-green-grey" for="email">Correo electrónico</label>
+                        <input type="email" class="form-control custom-form" id="emailr" placeholder="Enter email">
+                    </div>
+                    <button type="submit" class="btn btn-default btn-lr lato-bold">crear nueva cuenta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,8 +3,11 @@ package edu.eci.cosw.entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.Serializable;
 import java.sql.Blob;
+import java.sql.SQLException;
 import java.util.Date;
 
 /**
@@ -17,6 +20,7 @@ public class Multimedia implements Serializable{
 
     Date fechaYHora;
     Blob multimedia;
+    String tipo;
     MultimediaId id;
 
     @EmbeddedId
@@ -28,10 +32,12 @@ public class Multimedia implements Serializable{
         this.id = id;
     }
 
-    public Multimedia(Date fechaYHora, Blob multimedia, MultimediaId id) {
+    public Multimedia(Date fechaYHora, String t, Blob multimedia, MultimediaId id) {
         this.fechaYHora = fechaYHora;
         this.multimedia = multimedia;
         this.id = id;
+        this.tipo = t;
+
     }
 
     public Multimedia() {

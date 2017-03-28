@@ -8,12 +8,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import javax.sql.rowset.serial.SerialBlob;
+import java.sql.Blob;
+import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 /**
  * Created by david on 17/03/2017.
  */
+@CrossOrigin
 @RestController
 @RequestMapping("/multimedia")
 public class MultimediaController {
@@ -27,13 +33,13 @@ public class MultimediaController {
 
     @RequestMapping(path = "/{bar}/{numero}", method = RequestMethod.GET)
     @ResponseBody
-    public ResponseEntity<Multimedia> getMultimedia(@PathVariable int numero, @PathVariable int bar) {
+    public ResponseEntity<Blob> getMultimedia(@PathVariable int numero, @PathVariable int bar) {
         MultimediaId a=new MultimediaId(bar,numero);
         Multimedia toReturn = multimediaServices.getById(a);
         if(toReturn == null){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        return ResponseEntity.ok().body(toReturn);
+        return ResponseEntity.ok().body(toReturn.getMultimedia());
 
     }
 
@@ -47,12 +53,36 @@ public class MultimediaController {
         return ResponseEntity.ok().body(toReturn);
     }
 
-    @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<?> postMultimedia(@RequestBody Multimedia multimedia){
-        if(multimediaServices.getById(multimedia.getId())!=null){
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    @RequestMapping(
+            value = "/{bar}",
+            method = RequestMethod.POST
+    )
+    public ResponseEntity uploadFile(MultipartHttpServletRequest request,@PathVariable int bar) {
+
+        try {
+            Iterator<String> itr = request.getFileNames();
+            System.out.println(request.toString());
+
+            while (itr.hasNext()) {
+                String uploadedFile = itr.next();
+                MultipartFile file = request.getFile(uploadedFile);
+                String mimeType = file.getContentType();
+                String filename = file.getOriginalFilename();
+                byte[] bytes = file.getBytes();
+                Blob bb= new SerialBlob(bytes);
+                System.out.println(mimeType+"--------------------------------------------------------------------------------------------");
+                multimediaServices.SaveMultimedia(new Multimedia(new Date(),mimeType,bb,new MultimediaId(bar,10)));
+            }
         }
-        multimediaServices.SaveMultimedia(multimedia);
-        return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        catch (Exception e) {
+            return new ResponseEntity<>("{}", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
+        return new ResponseEntity<>("{}", HttpStatus.OK);
     }
+
+
+
+
+
 }
