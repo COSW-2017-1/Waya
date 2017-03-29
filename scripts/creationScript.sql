@@ -1,14 +1,14 @@
 CREATE TABLE `BARES` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) COLLATE latin1_general_ci NOT NULL,
-  `logo` varchar(45) COLLATE latin1_general_ci NOT NULL,
+  `logo` varchar(300) COLLATE latin1_general_ci NOT NULL,
   `descripcion` varchar(45) COLLATE latin1_general_ci NOT NULL,
   `horario` varchar(45) COLLATE latin1_general_ci,
   `direccion` varchar(45) COLLATE latin1_general_ci NOT NULL,
   `tipo` varchar(45) COLLATE latin1_general_ci NOT NULL,
   `genero` varchar(45) COLLATE latin1_general_ci NOT NULL,
-  `longitud` DOUBLE(10,10)  NOT NULL,
-  `latitud` DOUBLE(10,10) NOT NULL,
+  `longitud` decimal(10,5)  NOT NULL,
+  `latitud` decimal(10,5) NOT NULL,
   PRIMARY KEY (`id`)  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
