@@ -30,13 +30,13 @@ audio, canvas, video {
 .SBanchoTotal{
  width: 100%;
 }
-#SBcontainer{min-height:90%;position:relative;margin-top:5%;}
+#SBcontainer{min-height:95%;position:relative;margin-top:5%;}
 div#content{padding-bottom:194px;}
 div#content .strong{color:#212328;}
 div#content header{padding:0 60px 60px;}
-div#content #pfd{padding:60px 0}
 div#content #pfd img {
-    width: 80%
+    max-width: 80%;
+    max-height: 20%;
 }
 div#content #preamble,
 div#content article {
@@ -52,7 +52,7 @@ div#content #preamble h2,
 div#content article h2 {
     color: #80807e;
     font: 300 15px/1.4em museo-sans, sans-serif;
-    padding-bottom: 1em
+    padding-bottom: 0.3em
 }
 div#content #preamble h3,
 div#content article h3 {
@@ -63,7 +63,7 @@ div#content #preamble p,
 div#content article p {
     color: #80807e;
     font: 300 15px/1.2em Source Sans Pro, sans-serif;
-    padding-bottom: 1em
+    padding-bottom: 0.3em
 }
 div#content #preamble p.space-after,
 div#content article p.space-after {
