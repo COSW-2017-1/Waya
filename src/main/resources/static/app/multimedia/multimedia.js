@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('myApp.pruebaMultimedia', ['ngRoute'])
+angular.module('myApp.multimedia', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/pruebaMultimedia', {
-    templateUrl: 'pruebaMultimedia/pruebaMultimedia.html',
-    controller: 'pruebaMultimediaCtrl'
+  $routeProvider.when('/multimedia', {
+    templateUrl: 'multimedia/multimedia.html',
+    controller: 'multimediaCtrl'
   });
 }])
 
-.controller('pruebaMultimediaCtrl', ['$scope', 'fileUpload',function($scope,fileUpload) {
+.controller('multimediaCtrl', ['$scope', 'fileUpload',function($scope,fileUpload) {
         $scope.file = "";
         $scope.agregar = function() {
             var file = $scope.myFile;

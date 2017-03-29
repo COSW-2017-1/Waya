@@ -12,7 +12,7 @@ angular.module('myApp', [
   'myApp.registro',
   'services.listFactory',
   'myApp.version',
-  'myApp.pruebaMultimedia',
+  'myApp.multimedia',
   'myApp.detalleBar'
 ])
 .config(['$locationProvider', '$routeProvider','$httpProvider', function($locationProvider, $routeProvider, $httpProvider) {
