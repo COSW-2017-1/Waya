@@ -11,8 +11,7 @@
 <input type="text" required="required" class="SBform SBinput" placeholder="Buscar" ng-model="data" ng-change="buscar()" />
 
 <section class="SBposts">
-
-  <article class="SBpost" ng-repeat="todo in listado | orderBy:propertyName:reverse">
+  <article class="SBpost" ng-repeat="todo in listado | orderBy:propertyName:reverse" ng-click="ir($index)">
     <div class="SBdescripcion">
       <figure class="SBimagen">
         <img class="img-circle" src="/bares/{{todo.id}}/logo"/>

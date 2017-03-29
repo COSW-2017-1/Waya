@@ -36,6 +36,9 @@ angular.module('myApp.obtenerBares', ['ngRoute'])
         $scope.buscar = function(){
             baresFabrica.buscar($scope.data);
         };
+		$scope.ir = function(idx){
+             window.location = "http://wayafiesta.herokuapp.com/app/index.html#!/detalleBar/"+(idx+1);
+        };
 
 
 
