@@ -7,7 +7,7 @@ import javax.persistence.*;
  * Created by Juan Pablo on 18/02/2017.
  */
 @Entity
-@Table(name = "Persons")
+@Table(name = "PERSONS")
 public class Person {
 
     private Long id;
