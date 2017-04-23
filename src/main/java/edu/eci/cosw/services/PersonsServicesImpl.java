@@ -24,6 +24,12 @@ public class PersonsServicesImpl implements PersonsServices {
 
     @Override
     public void save(Person person) {
+        java.util.Date dt = new java.util.Date();
+        java.text.SimpleDateFormat sdf =
+                new java.text.SimpleDateFormat("yyyy-MM-dd");
+
+        String currentTime = sdf.format(dt);
+        //person.getDetails().setDateOfBirth(currentTime);
         person.setAuthority("ROLE_USER");
         personsRepository.save(person);
     }

@@ -33,11 +33,11 @@
                     <li><p class="lato-bold"><span class="glyphicon glyphicon-ok"></span> Aumenta puntos para ganar recompensas.</p></li>
                 </ul>
                 <form style="padding-top: 15px;">
-                    <div class="form-group" style="padding-bottom: 15px;">
+                    <div ng-controller="IngresoCtrl" class="form-group" style="padding-bottom: 15px;">
                         <label class="lato ligth-green-grey" for="email">Correo electrónico</label>
-                        <input type="email" class="form-control custom-form" id="emailr" placeholder="Enter username">
+                        <input type="email" class="form-control custom-form" id="emailr" placeholder="Ingresa tu correo" ng-model="email">
                     </div>
-                    <button type="submit" class="btn btn-default btn-lr lato-bold"><a href="#!/registro">crear nueva cuenta</a></button>
+                    <button type="submit" class="btn btn-default btn-lr lato-bold"><a href="#!/registro">Crear nueva cuenta</a></button>
                 </form>
             </div>
         </div>

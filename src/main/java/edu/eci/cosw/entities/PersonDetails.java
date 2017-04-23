@@ -12,14 +12,16 @@ public class PersonDetails {
 
     private String firstName;
     private String lastName;
+    private String email;
     private Date dateOfBirth;
     private int phoneNumber;
 
     protected PersonDetails(){}
 
-    public PersonDetails(String firstName, String lastName, Date dateOfBirth, int phoneNumber) {
+    public PersonDetails(String firstName, String lastName, String email, Date dateOfBirth, int phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.email = email;
         this.dateOfBirth = dateOfBirth;
         this.phoneNumber = phoneNumber;
     }
@@ -41,6 +43,10 @@ public class PersonDetails {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    @Column(name = "email")
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
 
     @Column(name = "dateofbirth")
     public Date getDateOfBirth() {

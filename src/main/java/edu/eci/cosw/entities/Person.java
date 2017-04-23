@@ -41,7 +41,7 @@ public class Person {
         this.username = username;
     }
 
-    @Column(name = "password")
+    @Column(name = "pass")
     public String getPassword() {
         return password;
     }
