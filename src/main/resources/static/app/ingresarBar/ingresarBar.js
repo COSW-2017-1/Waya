@@ -25,6 +25,7 @@ Implementación básica sin API
         var bar={"logo":$scope.logo,"name":$scope.name,"descripcion":$scope.descripcion,"horario":$scope.horario,
         "direccion":$scope.direccion,"latitud":$scope.latitud,"longitud":$scope.longitud,"tipo":$scope.tipo, "genero":$scope.genero};
         bares.save(bar);
+        alert("Bar añadido exitosamente");
       }
 
 
