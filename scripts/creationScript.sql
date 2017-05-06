@@ -1,5 +1,5 @@
 CREATE TABLE `BARES` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `bar` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) COLLATE latin1_general_ci NOT NULL,
   `logo` varchar(300) COLLATE latin1_general_ci NOT NULL,
   `descripcion` varchar(45) COLLATE latin1_general_ci NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE `BARES` (
   `genero` varchar(45) COLLATE latin1_general_ci NOT NULL,
   `longitud` decimal(10,5)  NOT NULL,
   `latitud` decimal(10,5) NOT NULL,
-  PRIMARY KEY (`id`)  
+  PRIMARY KEY (`bar`)  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 CREATE TABLE `MULTIMEDIA`(
@@ -19,7 +19,7 @@ CREATE TABLE `MULTIMEDIA`(
   `multimedia` BLOB  NOT NULL,
   PRIMARY KEY (`bar`,`numero`),
   KEY `fk_BARES_has_MULTIMEDIA` (`bar`),
-  CONSTRAINT `fk_BARES_has_MULTIMEDIA` FOREIGN KEY (`bar`) REFERENCES `BARES` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_BARES_has_MULTIMEDIA` FOREIGN KEY (`bar`) REFERENCES `BARES` (`bar`) ON DELETE NO ACTION ON UPDATE NO ACTION
 )ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 CREATE TABLE `PERSONS`(
@@ -33,6 +33,30 @@ CREATE TABLE `PERSONS`(
   `phonenumber` int(11),
   PRIMARY KEY (`id`)
 )ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+CREATE TABLE `EVENTOS`(
+  `bar` int(11) NOT NULL,
+  `numero` int(11)NOT NULL,
+  `nombre` varchar(200) COLLATE latin1_general_ci NOT NULL,
+  `fecha` TIMESTAMP,
+  `imagenPromocional` BLOB,
+  PRIMARY KEY (`bar`,`numero`),
+  KEY `fk_BARES_has_EVENTOS` (`bar`)
+  CONSTRAINT `fk_BARES_has_EVENTOS` FOREIGN KEY (`bar`) REFERENCES `BARES` (`bar`) ON DELETE NO ACTION ON UPDATE NO ACTION
+)ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+CREATE TABLE `CUPONES`(
+  `bar` int(11) NOT NULL,
+  `numero` int(11)NOT NULL,
+  `tipo` varchar(250) COLLATE latin1_general_ci NOT NULL,
+  `titulo` varchar(250) COLLATE latin1_general_ci NOT NULL,
+  `descuento` decimal NOT NULL,
+  `fechaExpiracion` TIMESTAMP NOT NULL,
+  PRIMARY KEY (`bar`,`numero`),
+  KEY `fk_BARES_has_CUPONES` (`bar`)
+  CONSTRAINT `fk_BARES_has_CUPONES` FOREIGN KEY (`bar`) REFERENCES `BARES` (`bar`) ON DELETE NO ACTION ON UPDATE NO ACTION    
+)ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
 --INSERTS ---
 INSERT INTO BARES (name, logo, descripcion,horario,direccion,tipo,genero,longitud,latitud)VALUES ("lA SANTA","https://res.cloudinary.com/civico/image/upload/c_fit,f_auto,fl_lossy,h_1200,q_auto,w_1200/v1400097753/entity/image/file/056/000/5373cbd0820c65969e000056.jpg","La mejor Rumba en Modelia hasta las 3 pm","6:00 pm - 9 pm","Carrera 75 # 24C-08 - Piso 2","Normal","Crossover",4.6483228507399925,-74.10780699999998);
 INSERT INTO BARES (name, logo, descripcion,horario,direccion,tipo,genero,longitud,latitud)VALUES ("LUX BY THEATRON","https://4.bp.blogspot.com/--O06kCIWTkE/V0nI2nykS2I/AAAAAAAAJ0o/ZSElkq6V2ogYDVqH9SvnTy16oeBmVHSPACLcB/s640/theatron5.jpg","13 ambientes con mas de trece años","9:00 pm a 04:30 am","Calle 58 # 10-322","Cover","Crossover",4.673534552758134,-74.06278209999999);

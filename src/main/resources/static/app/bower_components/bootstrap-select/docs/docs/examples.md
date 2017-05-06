@@ -29,7 +29,7 @@
 </select>
 ```
 
-<div id="optgroup"></div>
+<div bar="optgroup"></div>
 ## Select boxes with optgroups
 
 <div class="bs-docs-example">
@@ -167,7 +167,7 @@ Limit the number of options that can be selected via the `data-max-options` attr
 ---
 
 ## Placeholder
-<p id="titleMultiples"></p>
+<p bar="titleMultiples"></p>
 Using the `title` attribute will set the default placeholder text when nothing is selected. This works for both multiple and standard select boxes:
 
 <div class="bs-docs-example">
@@ -200,7 +200,7 @@ Using the `title` attribute will set the default placeholder text when nothing i
 
 ## Selected text
 
-<p id="title"></p>
+<p bar="title"></p>
 Set the `title` attribute on individual options to display alternative text when the option is selected:
 
 <div class="bs-docs-example no-code">
@@ -220,7 +220,7 @@ Set the `title` attribute on individual options to display alternative text when
 ```
 ## Selected text format
 
-<p id="titleMultiplesFormat"></p>
+<p bar="titleMultiplesFormat"></p>
 Specify how the selection is displayed with the `data-selected-text-format` attribute on a multiple select.
 
 The supported values are:
@@ -374,7 +374,7 @@ The Bootstrap menu arrow can be added with the `show-menu-arrow` class:
 
 ## Style individual options
 
-<p id="classes"></p>
+<p bar="classes"></p>
 Classes and styles added to options are transferred to the select box:
 
 <div class="bs-docs-example">
@@ -404,7 +404,7 @@ Classes and styles added to options are transferred to the select box:
 
 ## Width
 
-<p id="grid"></p>
+<p bar="grid"></p>
 Wrap selects in grid columns, or any custom parent element, to easily enforce desired widths.
 
 <div class="bs-docs-example">
@@ -484,7 +484,7 @@ Wrap selects in grid columns, or any custom parent element, to easily enforce de
 </div>
 ```
 
-<div id="data-width"></div>
+<div bar="data-width"></div>
 
 Alternatively, use the `data-width` attribute to set the width of the select. Set `data-width` to `'auto'` to automatically adjust the width of the select to its widest option. `'fit'` automatically adjusts the width of the select to the width of its currently selected option. An exact value can also be specified, e.g., `300px` or `50%`.
 
@@ -678,7 +678,7 @@ The `size` option is set to `'auto'` by default. When `size` is set to `'auto'`,
   </select>
 </div>
 
-<p id="data-size"></p>
+<p bar="data-size"></p>
 Specify a number for `data-size` to choose the maximum number of items to show in the menu.
 
 <div class="bs-docs-example">

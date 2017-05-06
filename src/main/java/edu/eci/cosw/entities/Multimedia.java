@@ -3,11 +3,8 @@ package edu.eci.cosw.entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.io.Serializable;
 import java.sql.Blob;
-import java.sql.SQLException;
 import java.util.Date;
 
 /**

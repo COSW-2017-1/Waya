@@ -3,6 +3,7 @@ package edu.eci.cosw.entities;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -24,6 +25,8 @@ public class Bar implements Serializable{
     double latitud;
 
     Set<Multimedia> multimedia=new HashSet<>();
+    List<Evento> eventos;
+    List<Cupon> cupones;
 
     public Bar(String logo, String name, int id, String descripcion, String horario, String direccion, String tipo, String genero, double longitud, double latitud, Set<Multimedia> multimedia) {
         this.logo = logo;
@@ -53,7 +56,7 @@ public class Bar implements Serializable{
     }
 
     @OneToMany
-    @JoinColumn(name = "bar", referencedColumnName = "id", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "bar", referencedColumnName = "bar", nullable = false, insertable = false, updatable = false)
     public Set<Multimedia> getMultimedia() {
         return multimedia;
     }
@@ -127,7 +130,7 @@ public class Bar implements Serializable{
         this.name = name;
     }
 
-    @Column(name = "id")
+    @Column(name = "bar")
     @Id
     @GeneratedValue
     public int getId() {
@@ -154,6 +157,26 @@ public class Bar implements Serializable{
 
     public void setHorario(String horario) {
         this.horario = horario;
+    }
+
+    @OneToMany
+    @JoinColumn(name = "bar", referencedColumnName = "bar", nullable = false, insertable = false, updatable = false)
+    public List<Evento> getEventos() {
+        return eventos;
+    }
+
+    public void setEventos(List<Evento> eventos) {
+        this.eventos = eventos;
+    }
+
+    @OneToMany
+    @JoinColumn(name = "bar", referencedColumnName = "bar", nullable = false, insertable = false, updatable = false)
+    public List<Cupon> getCupones() {
+        return cupones;
+    }
+
+    public void setCupones(List<Cupon> cupones) {
+        this.cupones = cupones;
     }
 
     @Override

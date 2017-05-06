@@ -2,7 +2,9 @@ package edu.eci.cosw.controllers;
 
 import edu.eci.cosw.entities.Bar;
 import edu.eci.cosw.entities.Coordenada;
+import edu.eci.cosw.entities.Cupon;
 import edu.eci.cosw.services.BaresServices;
+import edu.eci.cosw.services.CuponesServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpStatus;
@@ -11,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.InputStream;
+import java.util.List;
 
 /**
  * Created by david on 11/02/2017.
@@ -21,6 +24,9 @@ public class BaresController {
 
     @Autowired
     private BaresServices manejadorBares;
+
+    @Autowired
+    private CuponesServices cuponesServices;
 
     public void setManejadorBares(BaresServices manejadorBares) {
         this.manejadorBares = manejadorBares;
@@ -99,5 +105,12 @@ public class BaresController {
         Coordenada coordenada = manejadorBares.getCoordenadas(id);
         if(coordenada==null)return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         return new ResponseEntity<>(coordenada,HttpStatus.ACCEPTED);
+    }
+
+    @RequestMapping(path = "/{bar}/cupones", method = RequestMethod.GET)
+    public ResponseEntity<List<Cupon>> getCuponesFromBar(@PathVariable int bar){
+        List<Cupon> toReturn = cuponesServices.getCuponesByBar(bar);
+        if(toReturn == null)return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return ResponseEntity.ok().body(toReturn);
     }
 }

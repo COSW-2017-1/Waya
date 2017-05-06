@@ -16,6 +16,8 @@
     <mapping class="edu.eci.cosw.entities.Bar"></mapping>
     <mapping class="edu.eci.cosw.entities.Multimedia"></mapping>
     <mapping class="edu.eci.cosw.entities.Person"></mapping>
+    <mapping class="edu.eci.cosw.entities.Cupon"></mapping>
+    <mapping class="edu.eci.cosw.entities.Evento"></mapping>
   </session-factory>
     
 </hibernate-configuration>

@@ -11,29 +11,29 @@
 </defs>
 <path d="M511.48,144.699c0,12.486-10.121,22.612-22.605,22.612H22.61C10.125,167.312,0,157.186,0,144.699V22.61
 	C0,10.125,10.125,0,22.61,0h466.264c12.484,0,22.605,10.125,22.605,22.61V144.699z"/>
-<g id="PLAY_2_">
+<g bar="PLAY_2_">
 	<defs>
-		<path id="SVGID_1_" d="M110.844,73.646L87.781,60.331c0,0-42.016-24.261-44.486-25.687s-4.931-0.562-4.931,2.418
+		<path bar="SVGID_1_" d="M110.844,73.646L87.781,60.331c0,0-42.016-24.261-44.486-25.687s-4.931-0.562-4.931,2.418
 			c0,4.965,0,51.8,0,51.8s0,50.615,0,52.851c0,2.234,1.759,3.197,3.905,1.959c2.145-1.24,45.512-26.279,45.512-26.279l23.062-13.314
 			c0,0,19.568-11.297,22.169-12.798c2.601-1.503,2.351-3.563,0.156-4.745C130.974,85.353,110.844,73.646,110.844,73.646z"/>
 	</defs>
-	<clipPath id="SVGID_2_">
+	<clipPath bar="SVGID_2_">
 		<use xlink:href="#SVGID_1_"  overflow="visible"/>
 	</clipPath>
-	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="66.9316" y1="32.2109" x2="66.9316" y2="145.5137">
+	<linearGradient bar="SVGID_3_" gradientUnits="userSpaceOnUse" x1="66.9316" y1="32.2109" x2="66.9316" y2="145.5137">
 		<stop  offset="0" style="stop-color:#257CB0"/>
 		<stop  offset="0.2863" style="stop-color:#4A93B5"/>
 		<stop  offset="0.767" style="stop-color:#78BCBB"/>
 		<stop  offset="1" style="stop-color:#89CFBD"/>
 	</linearGradient>
 	<polygon clip-path="url(#SVGID_2_)" fill="url(#SVGID_3_)" points="38.365,32.211 38.365,88.862 38.365,145.514 95.499,88.863 	"/>
-	<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="38.3647" y1="60.3311" x2="110.8442" y2="60.3311">
+	<linearGradient bar="SVGID_4_" gradientUnits="userSpaceOnUse" x1="38.3647" y1="60.3311" x2="110.8442" y2="60.3311">
 		<stop  offset="0" style="stop-color:#52C1AD"/>
 		<stop  offset="1" style="stop-color:#DEE89A"/>
 	</linearGradient>
 	<polygon clip-path="url(#SVGID_2_)" fill="url(#SVGID_4_)" points="110.844,73.646 87.781,60.331 38.365,31.799 38.365,32.211 
 		95.499,88.863 	"/>
-	<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="74.604" y1="88.8633" x2="74.604" y2="145.9258">
+	<linearGradient bar="SVGID_5_" gradientUnits="userSpaceOnUse" x1="74.604" y1="88.8633" x2="74.604" y2="145.9258">
 		<stop  offset="0" style="stop-color:#EC413D"/>
 		<stop  offset="0.1668" style="stop-color:#DA4452"/>
 		<stop  offset="0.5748" style="stop-color:#B0487A"/>
@@ -42,7 +42,7 @@
 	</linearGradient>
 	<polygon clip-path="url(#SVGID_2_)" fill="url(#SVGID_5_)" points="38.365,145.514 38.365,145.926 87.781,117.393 110.843,104.078 
 		95.499,88.863 	"/>
-	<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="116.3496" y1="73.6465" x2="116.3496" y2="104.0781">
+	<linearGradient bar="SVGID_6_" gradientUnits="userSpaceOnUse" x1="116.3496" y1="73.6465" x2="116.3496" y2="104.0781">
 		<stop  offset="0" style="stop-color:#F58879"/>
 		<stop  offset="0.1194" style="stop-color:#F69079"/>
 		<stop  offset="0.7128" style="stop-color:#FCB877"/>
