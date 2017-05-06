@@ -3,6 +3,7 @@ package edu.eci.cosw.controllers;
 import edu.eci.cosw.entities.Bar;
 import edu.eci.cosw.entities.Coordenada;
 import edu.eci.cosw.entities.Cupon;
+import edu.eci.cosw.entities.CuponId;
 import edu.eci.cosw.services.BaresServices;
 import edu.eci.cosw.services.CuponesServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -110,6 +111,23 @@ public class BaresController {
     @RequestMapping(path = "/{bar}/cupones", method = RequestMethod.GET)
     public ResponseEntity<List<Cupon>> getCuponesFromBar(@PathVariable int bar){
         List<Cupon> toReturn = cuponesServices.getCuponesByBar(bar);
+        if(toReturn == null)return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return ResponseEntity.ok().body(toReturn);
+    }
+
+    @RequestMapping(path = "/{bar}/cupones", method = RequestMethod.POST)
+    public ResponseEntity<?> saveCupon(@PathVariable int bar, @RequestBody Cupon cupon){
+        try{
+            cuponesServices.saveCupon(cupon);
+            return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        }catch (Exception ex){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @RequestMapping(path = "/{bar}/cupones/{cupon}", method = RequestMethod.GET)
+    public ResponseEntity<Cupon> getCuponById(@PathVariable int bar, @PathVariable int cupon){
+        Cupon toReturn = cuponesServices.getById(new CuponId(cupon,bar));
         if(toReturn == null)return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         return ResponseEntity.ok().body(toReturn);
     }
