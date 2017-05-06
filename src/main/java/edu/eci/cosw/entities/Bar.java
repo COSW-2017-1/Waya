@@ -55,6 +55,22 @@ public class Bar implements Serializable{
         this.latitud = latitud;
     }
 
+    public Bar(String logo, String name, int id, String descripcion, String horario, String direccion, String tipo, String genero, double longitud, double latitud, Set<Multimedia> multimedia, List<Evento> eventos, List<Cupon> cupones) {
+        this.logo = logo;
+        this.name = name;
+        this.id = id;
+        this.descripcion = descripcion;
+        this.horario = horario;
+        this.direccion = direccion;
+        this.tipo = tipo;
+        this.genero = genero;
+        this.longitud = longitud;
+        this.latitud = latitud;
+        this.multimedia = multimedia;
+        this.eventos = eventos;
+        this.cupones = cupones;
+    }
+
     @OneToMany
     @JoinColumn(name = "bar", referencedColumnName = "bar", nullable = false, insertable = false, updatable = false)
     public Set<Multimedia> getMultimedia() {

@@ -14,6 +14,6 @@ import java.util.List;
 @Service
 public interface EventsRepository extends JpaRepository<Evento,EventoId>{
 
-    @Query("Select distinct evento from Eventos as evento where evento.id.bar=?1")
+    @Query("Select distinct evento from Evento as evento where evento.id.bar=?1")
     List<Evento> getEventosByBar(int bar);
 }

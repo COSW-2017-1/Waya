@@ -28,6 +28,10 @@ public class Cupon implements Serializable{
         this.id = id;
     }
 
+    public Cupon(CuponId id) {
+        this.id = id;
+    }
+
     @Column(name = "titulo", nullable = false)
     public String getTitulo() {
         return titulo;

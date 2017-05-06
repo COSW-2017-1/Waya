@@ -41,7 +41,7 @@ CREATE TABLE `EVENTOS`(
   `fecha` TIMESTAMP,
   `imagenPromocional` BLOB,
   PRIMARY KEY (`bar`,`numero`),
-  KEY `fk_BARES_has_EVENTOS` (`bar`)
+  KEY `fk_BARES_has_EVENTOS` (`bar`),
   CONSTRAINT `fk_BARES_has_EVENTOS` FOREIGN KEY (`bar`) REFERENCES `BARES` (`bar`) ON DELETE NO ACTION ON UPDATE NO ACTION
 )ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
@@ -53,11 +53,10 @@ CREATE TABLE `CUPONES`(
   `descuento` decimal NOT NULL,
   `fechaExpiracion` TIMESTAMP NOT NULL,
   PRIMARY KEY (`bar`,`numero`),
-  KEY `fk_BARES_has_CUPONES` (`bar`)
+  KEY `fk_BARES_has_CUPONES` (`bar`),
   CONSTRAINT `fk_BARES_has_CUPONES` FOREIGN KEY (`bar`) REFERENCES `BARES` (`bar`) ON DELETE NO ACTION ON UPDATE NO ACTION    
 )ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
---INSERTS ---
 INSERT INTO BARES (name, logo, descripcion,horario,direccion,tipo,genero,longitud,latitud)VALUES ("lA SANTA","https://res.cloudinary.com/civico/image/upload/c_fit,f_auto,fl_lossy,h_1200,q_auto,w_1200/v1400097753/entity/image/file/056/000/5373cbd0820c65969e000056.jpg","La mejor Rumba en Modelia hasta las 3 pm","6:00 pm - 9 pm","Carrera 75 # 24C-08 - Piso 2","Normal","Crossover",4.6483228507399925,-74.10780699999998);
 INSERT INTO BARES (name, logo, descripcion,horario,direccion,tipo,genero,longitud,latitud)VALUES ("LUX BY THEATRON","https://4.bp.blogspot.com/--O06kCIWTkE/V0nI2nykS2I/AAAAAAAAJ0o/ZSElkq6V2ogYDVqH9SvnTy16oeBmVHSPACLcB/s640/theatron5.jpg","13 ambientes con mas de trece años","9:00 pm a 04:30 am","Calle 58 # 10-322","Cover","Crossover",4.673534552758134,-74.06278209999999);
 INSERT INTO BARES (name, logo, descripcion,horario,direccion,tipo,genero,longitud,latitud)VALUES ("GAIRA BAR","http://gairacafe.co/templates/gaira/images/confirmacionReserva.jpg","El templo de la música del mundo","12:00 pm a 03:00 am","Cra. 13 #96-11","Normal","Vallenato",4.6805644513002065,-74.04756954999999);

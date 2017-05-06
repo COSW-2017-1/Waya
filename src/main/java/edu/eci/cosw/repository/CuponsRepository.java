@@ -12,8 +12,8 @@ import java.util.List;
  * Created by David Useche on 5/05/2017.
  */
 @Service
-public interface CuponsRepository extends JpaRepository<Cupon, CuponId> {
+public interface CuponsRepository extends JpaRepository<Cupon,CuponId> {
 
-    @Query("Select distinct cupon from Cupones where cupon.id.bar=?1")
+    @Query("Select distinct cupon from Cupon as cupon where cupon.id.bar = ?1")
     List<Cupon> getCuponesByBar(int bar);
 }
